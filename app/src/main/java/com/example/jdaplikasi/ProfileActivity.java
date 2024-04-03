@@ -50,7 +50,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     // Method untuk membuka ProfileActivity
     private void openWishlistActivity() {
-        Intent intent = new Intent(this, WishlistDestinationActivity.class);
+        Intent intent = new Intent(this, PopularDestinationActivity.class);
         startActivity(intent);
     }
 }

@@ -165,7 +165,8 @@
                             android:layout_height="match_parent"
                             android:layout_marginRight="10dp"
                             android:background="@drawable/rounded15"
-                            android:backgroundTint="@color/white" />
+                            android:backgroundTint="@color/white"
+                            android:src="@drawable/category_mountain"/>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -191,7 +192,8 @@
                             android:layout_height="match_parent"
                             android:layout_marginRight="10dp"
                             android:background="@drawable/rounded15"
-                            android:backgroundTint="@color/white" />
+                            android:backgroundTint="@color/white"
+                            android:src="@drawable/category_beach"/>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -200,6 +202,85 @@
                             android:text="Beach"
                             android:textColor="@color/white" />
                     </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lake"
+                        android:layout_width="200dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/rounded15"
+                        android:backgroundTint="@color/light_blue"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/rounded15"
+                            android:backgroundTint="@color/white"
+                            android:src="@drawable/category_lake"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Lake"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/crater"
+                        android:layout_width="200dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/rounded15"
+                        android:backgroundTint="@color/light_blue"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/rounded15"
+                            android:backgroundTint="@color/white"
+                            android:src="@drawable/category_crater"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Crater"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/park"
+                        android:layout_width="200dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/rounded15"
+                        android:backgroundTint="@color/light_blue"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/rounded15"
+                            android:backgroundTint="@color/white"
+                            android:src="@drawable/category_park"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Park"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
 
                 </LinearLayout>
 
@@ -288,6 +369,7 @@
                                 android:layout_height="12dp"
                                 android:text="Flores, NTT"
                                 android:textSize="10dp"
+                                android:textColor="@color/white"
                                 tools:ignore="TextSizeCheck" />
 
                             <ImageView
@@ -342,6 +424,7 @@
                                 android:layout_width="120dp"
                                 android:layout_height="12dp"
                                 android:text="Papua"
+                                android:textColor="@color/white"
                                 android:textSize="10dp"
                                 tools:ignore="TextSizeCheck" />
 
@@ -446,6 +529,7 @@
                                 android:layout_width="120dp"
                                 android:layout_height="12dp"
                                 android:text="Nusa Tenggara Barat"
+                                android:textColor="@color/white"
                                 android:textSize="10dp"
                                 tools:ignore="TextSizeCheck" />
 
@@ -501,6 +585,7 @@
                                 android:layout_width="120dp"
                                 android:layout_height="12dp"
                                 android:text="Papua Barat"
+                                android:textColor="@color/white"
                                 android:textSize="10dp"
                                 tools:ignore="TextSizeCheck" />
 

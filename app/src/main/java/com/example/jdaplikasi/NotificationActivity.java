@@ -49,7 +49,7 @@ public class NotificationActivity extends AppCompatActivity {
 
     // Method untuk membuka WishlistActivity (Sudah Fix)
     private void openWishlistActivity() {
-        Intent intent = new Intent(this, WishlistDestinationActivity.class);
+        Intent intent = new Intent(this, PopularDestinationActivity.class);
         startActivity(intent);
     }
 

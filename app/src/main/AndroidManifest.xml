@@ -12,7 +12,10 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".MountActivity"
+            android:name=".DetailDestination"
+            android:exported="false" />
+        <activity
+            android:name=".MountainActivity"
             android:exported="false" />
         <activity
             android:name=".BeachActivity"
@@ -36,7 +39,7 @@
             android:name=".LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".WishlistDestinationActivity"
+            android:name=".PopularDestinationActivity"
             android:exported="true" /> <!-- Layout Pertama Dibuka -->
         <activity
             android:name=".SplashscreenActivity"

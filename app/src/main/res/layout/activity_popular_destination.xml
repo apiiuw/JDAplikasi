@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#31363F"
     android:orientation="vertical"
-    tools:context=".WishlistDestinationActivity">
+    tools:context=".PopularDestinationActivity">
 
     <!-- Top Layout -->
     <LinearLayout
@@ -85,7 +85,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Nusa Penida"
+                            android:text="Nusa Penida Beach"
                             android:textColor="@color/black"
                             android:textStyle="bold" />
 
