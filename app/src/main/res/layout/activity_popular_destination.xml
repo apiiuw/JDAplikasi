@@ -368,6 +368,68 @@
 
                 </LinearLayout>
 
+                <!-- Konten 6 -->
+                <LinearLayout
+                    android:id="@+id/mount_lawu"
+                    android:layout_width="match_parent"
+                    android:layout_height="112dp"
+                    android:background="@drawable/rounded15"
+                    android:backgroundTint="@color/light_blue"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    android:layout_marginVertical="5dp">
+
+                    <ImageView
+                        android:layout_width="140dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/mount_lawu"
+                        android:scaleType="centerCrop"/>
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mount Lawu"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/lokasi_icon_fill" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="2dp"
+                                android:text="Jawa Tengah"
+                                android:textSize="10dp"
+                                tools:ignore="TextSizeCheck" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/lovefillicon"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+
 
             </LinearLayout>
 

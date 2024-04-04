@@ -123,19 +123,6 @@
                     android:textColor="#FFFFFF"
                     android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/PopularAll"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="See all"
-                    android:textColor="@color/white" />
-
-                <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="12dp"
-                    android:layout_marginLeft="3dp"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/panahkanan" />
 
             </LinearLayout>
 
@@ -305,20 +292,6 @@
                     android:textColor="#FFFFFF"
                     android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/ExploreAll"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="See all"
-                    android:textColor="@color/white" />
-
-                <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="12dp"
-                    android:layout_marginLeft="3dp"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/panahkanan" />
-
             </LinearLayout>
 
             <HorizontalScrollView
@@ -331,6 +304,64 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/mountbromo"
+                        android:layout_width="250dp"
+                        android:layout_height="150dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/border_only_light_blue"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:layout_width="230dp"
+                            android:layout_height="90dp"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/mountain_bromo" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mount Bromo"
+                            android:textColor="@color/white" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="12dp"
+                                android:src="@drawable/lokasi_icon" />
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="12dp"
+                                android:text="Jawa Timur"
+                                android:textSize="10dp"
+                                android:textColor="@color/white"
+                                tools:ignore="TextSizeCheck" />
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="12dp"
+                                android:src="@drawable/map_icon" />
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="12dp"
+                                android:text="Map Direction"
+                                android:textColor="@color/light_blue"
+                                android:textSize="10dp"
+                                tools:ignore="TextSizeCheck" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
 
                     <LinearLayout
                         android:id="@+id/pinkbeach"
@@ -393,6 +424,7 @@
                         android:id="@+id/painemobeach"
                         android:layout_width="250dp"
                         android:layout_height="150dp"
+                        android:layout_marginRight="15dp"
                         android:background="@drawable/border_only_light_blue"
                         android:orientation="vertical"
                         android:padding="15dp">
@@ -438,7 +470,64 @@
                                 android:layout_height="12dp"
                                 android:text="Map Direction"
                                 android:textColor="@color/light_blue"
-                                android:textSize="10dp" />
+                                android:textSize="10dp"
+                                tools:ignore="TextSizeCheck" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mount_merbabu"
+                        android:layout_width="250dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/border_only_light_blue"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:layout_width="230dp"
+                            android:layout_height="90dp"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/gunungmerbabu" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mount Merbabu"
+                            android:textColor="@color/white" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="12dp"
+                                android:src="@drawable/lokasi_icon" />
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="12dp"
+                                android:text="Jawa Tengah"
+                                android:textColor="@color/white"
+                                android:textSize="10dp"
+                                tools:ignore="TextSizeCheck" />
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="12dp"
+                                android:src="@drawable/map_icon" />
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="12dp"
+                                android:text="Map Direction"
+                                android:textColor="@color/light_blue"
+                                android:textSize="10dp"
+                                tools:ignore="TextSizeCheck" />
 
                         </LinearLayout>
 
@@ -465,20 +554,6 @@
                     android:text="Popular Destination"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/PopularDestinationAll"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="See all"
-                    android:textColor="@color/white" />
-
-                <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="12dp"
-                    android:layout_marginLeft="3dp"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/panahkanan" />
 
             </LinearLayout>
 
@@ -551,6 +626,63 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/nusapenida"
+                        android:layout_width="250dp"
+                        android:layout_height="150dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/border_only_light_blue"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:layout_width="230dp"
+                            android:layout_height="90dp"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/nusapenida" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nusa Penida Beach"
+                            android:textColor="@color/white" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="12dp"
+                                android:src="@drawable/lokasi_icon" />
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="12dp"
+                                android:text="Bali"
+                                android:textColor="@color/white"
+                                android:textSize="10dp"
+                                tools:ignore="TextSizeCheck" />
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="12dp"
+                                android:src="@drawable/map_icon" />
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="12dp"
+                                android:text="Map Direction"
+                                android:textColor="@color/light_blue"
+                                android:textSize="10dp"
+                                tools:ignore="TextSizeCheck" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:id="@+id/rajaampat"
                         android:layout_width="250dp"
                         android:layout_height="150dp"
@@ -599,11 +731,68 @@
                                 android:layout_height="12dp"
                                 android:text="Map Direction"
                                 android:textColor="@color/light_blue"
+                                android:textSize="10dp"
+                                tools:ignore="TextSizeCheck" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mount_lawu"
+                        android:layout_width="250dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/border_only_light_blue"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:layout_width="230dp"
+                            android:layout_height="90dp"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/mount_lawu" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mount Lawu"
+                            android:textColor="@color/white" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="12dp"
+                                android:src="@drawable/lokasi_icon" />
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="12dp"
+                                android:text="Jawa Tengah"
+                                android:textColor="@color/white"
+                                android:textSize="10dp"
+                                tools:ignore="TextSizeCheck" />
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="12dp"
+                                android:src="@drawable/map_icon" />
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="12dp"
+                                android:text="Map Direction"
+                                android:textColor="@color/light_blue"
                                 android:textSize="10dp" />
 
                         </LinearLayout>
 
                     </LinearLayout>
+
 
                 </LinearLayout>
 

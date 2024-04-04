@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#31363F"
+    tools:context=".SearchActivity">
+
+    <!-- Top Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/iconback"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Back"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <!-- Judul-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="63dp"
+        android:text="Things to see in Journey Destination"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <!-- Kolom Search -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginHorizontal="32dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editSearch"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/search_background"
+            android:drawableStart="@drawable/search_icon"
+            android:drawablePadding="10dp"
+            android:hint="Search Location..."
+            android:textColorHint="@color/black"
+            android:inputType="text"
+            android:paddingLeft="15dp" />
+
+    </LinearLayout>
+    <!-- Kolom Search Tutup-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="165dp"
+        android:text="What destination are you looking for?"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        android:textStyle="normal"
+        android:gravity="center"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="211dp"
+        android:layout_marginBottom="44dp"
+        android:layout_marginHorizontal="56dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- BEACH -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="148dp">
+            
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded15"
+                android:src="@drawable/search_beach"
+                android:scaleType="centerCrop"
+                android:clipToOutline="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="BEACH"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+        </RelativeLayout>
+
+        <!-- MOUNT -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="148dp"
+            android:layout_marginTop="24dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded15"
+                android:src="@drawable/search_mount"
+                android:scaleType="centerCrop"
+                android:clipToOutline="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="MOUNT"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+        </RelativeLayout>
+
+        <!-- LAKE -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="148dp"
+            android:layout_marginTop="24dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded15"
+                android:src="@drawable/search_lake"
+                android:scaleType="centerCrop"
+                android:clipToOutline="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="LAKE"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

@@ -48,29 +48,67 @@
                 android:layout_height="243dp"
                 android:layout_marginVertical="28dp"
                 android:layout_marginLeft="253dp"
-                android:paddingTop="15dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="15dp"
                 android:background="@drawable/rounded15"
                 android:backgroundTint="#50000000"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="63dp"
-                    android:layout_height="63dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/pink_beach_scroll_1"/>
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:ignore="SpeakableTextPresentCheck">
 
-                <ImageView
-                    android:layout_width="63dp"
-                    android:layout_height="63dp"
-                    android:layout_gravity="center"
-                    android:layout_marginVertical="15dp"
-                    android:src="@drawable/pink_beach_scroll_2"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="63dp"
-                    android:layout_height="63dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/pink_beach_scroll_3"/>
+                        <ImageView
+                            android:layout_width="63dp"
+                            android:layout_height="63dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="7.5dp"
+                            android:src="@drawable/pink_beach_scroll_1" />
+
+                        <ImageView
+                            android:layout_width="63dp"
+                            android:layout_height="63dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="7.5dp"
+                            android:src="@drawable/pink_beach_scroll_2" />
+
+                        <ImageView
+                            android:layout_width="63dp"
+                            android:layout_height="63dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="7.5dp"
+                            android:src="@drawable/pink_beach_scroll_3" />
+
+                        <ImageView
+                            android:layout_width="63dp"
+                            android:layout_height="63dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="7.5dp"
+                            android:src="@drawable/pink_beach_scroll_4" />
+
+                        <ImageView
+                            android:layout_width="63dp"
+                            android:layout_height="63dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="7.5dp"
+                            android:src="@drawable/pink_beach_scroll_5" />
+
+                        <ImageView
+                            android:layout_width="63dp"
+                            android:layout_height="63dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="7.5dp"
+                            android:src="@drawable/pink_beach_scroll_6" />
+
+                    </LinearLayout>
+
+                </ScrollView>
 
             </LinearLayout>
             
@@ -189,7 +227,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="73dp"
+                        android:layout_marginRight="20dp"
                         android:text="Flores, NTT"
                         android:layout_marginLeft="2dp" />
 
@@ -203,7 +241,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="100.000 IDR"
+                        android:text="100.000 IDR - 300.00 IDR"
                         android:layout_marginLeft="2dp"
                         android:textColor="#76ABAE" />
 

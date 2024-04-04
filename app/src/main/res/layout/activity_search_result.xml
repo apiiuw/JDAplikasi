@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#31363F"
+    tools:context=".SearchResultActivity">
+
+    <!-- Top Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/iconback"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Back"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <!-- Kolom Search -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginHorizontal="32dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editSearch"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/search_background"
+            android:drawableStart="@drawable/search_icon"
+            android:drawablePadding="10dp"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textColorHint="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+    <!-- Kolom Search Tutup-->
+
+    <!-- Result Search -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="44dp"
+        android:layout_marginHorizontal="32dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pink Beach"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="17dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Flores, NTT"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="normal"
+                tools:ignore="TextSizeCheck" />
+
+            <!-- Pembatas -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="10dp"
+                android:background="@color/white"/>
+            <!-- Pembatas -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mount Bromo"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="17dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Malang, Jawa Timur"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="normal"
+                tools:ignore="TextSizeCheck" />
+
+            <!-- Pembatas -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="10dp"
+                android:background="@color/white"/>
+            <!-- Pembatas -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nusa Penida Beach"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="17dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Klungkung, Bali"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="normal"
+                tools:ignore="TextSizeCheck" />
+
+            <!-- Pembatas -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="10dp"
+                android:background="@color/white"/>
+            <!-- Pembatas -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Baron Beach"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="17dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gunung Kidul, Yogyakarta"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="normal"
+                tools:ignore="TextSizeCheck" />
+
+            <!-- Pembatas -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="10dp"
+                android:background="@color/white"/>
+            <!-- Pembatas -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mount Prau"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="17dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wonosobo, Jawa Tengah"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="normal"
+                tools:ignore="TextSizeCheck" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
