@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ProfileActivity extends AppCompatActivity {
@@ -51,6 +53,11 @@ public class ProfileActivity extends AppCompatActivity {
     // Method untuk membuka ProfileActivity
     private void openWishlistActivity() {
         Intent intent = new Intent(this, PopularDestinationActivity.class);
+        startActivity(intent);
+    }
+
+    public void onclickBack(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 }

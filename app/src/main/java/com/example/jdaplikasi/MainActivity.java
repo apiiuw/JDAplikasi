@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -15,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Inisialisasi BottomNavigationView
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_view);
 
         // Atur listener untuk menangani klik pada item navigasi
@@ -50,6 +50,31 @@ public class MainActivity extends AppCompatActivity {
 
     // Method untuk membuka ProfileActivity
     private void openProfileActivity() {
+        Intent intent = new Intent(this, ProfileActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void onclickPopularCategory(View view) {
+        Intent intent = new Intent(this, BeachActivity.class);
+        startActivity(intent);
+    }
+
+    public void onclickNotification(View view) {
+        Intent intent = new Intent(this, NotificationActivity.class);
+        startActivity(intent);
+    }
+
+    public void onclickExploreCities(View view) {
+        Intent intent = new Intent(this, MountainActivity.class);
+        startActivity(intent);
+    }
+
+    public void onclickPopularDestination(View view) {
+        Intent intent = new Intent(this, PopularDestinationActivity.class);
+        startActivity(intent);
+    }
+    public void onclickProfile(View view) {
         Intent intent = new Intent(this, ProfileActivity.class);
         startActivity(intent);
     }

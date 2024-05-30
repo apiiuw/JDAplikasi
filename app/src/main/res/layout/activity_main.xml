@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="176dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp">
 
@@ -26,6 +26,7 @@
                 android:id="@+id/image_user"
                 android:layout_width="60sp"
                 android:layout_height="60sp"
+                android:onClick="onclickProfile"
                 android:src="@drawable/user_1" />
 
             <LinearLayout
@@ -65,9 +66,11 @@
                 android:id="@+id/imageView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/bell"
                 android:layout_gravity="center"
-                android:layout_marginLeft="130dp" />
+                android:layout_marginLeft="130dp"
+                android:onClick="onclickNotification"
+                android:src="@drawable/bell"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         </LinearLayout>
 
@@ -95,7 +98,7 @@
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="482dp"
+        android:layout_height="match_parent"
         android:layout_marginTop="176dp">
 
         <LinearLayout
@@ -145,6 +148,7 @@
                         android:background="@drawable/rounded15"
                         android:backgroundTint="@color/light_blue"
                         android:orientation="horizontal"
+                        android:onClick="onclickPopularCategory"
                         android:padding="5dp">
 
                         <ImageView
@@ -172,6 +176,7 @@
                         android:background="@drawable/rounded15"
                         android:backgroundTint="@color/light_blue"
                         android:orientation="horizontal"
+                        android:onClick="onclickPopularCategory"
                         android:padding="5dp">
 
                         <ImageView
@@ -198,6 +203,7 @@
                         android:background="@drawable/rounded15"
                         android:backgroundTint="@color/light_blue"
                         android:orientation="horizontal"
+                        android:onClick="onclickPopularCategory"
                         android:padding="5dp">
 
                         <ImageView
@@ -224,6 +230,7 @@
                         android:background="@drawable/rounded15"
                         android:backgroundTint="@color/light_blue"
                         android:orientation="horizontal"
+                        android:onClick="onclickPopularCategory"
                         android:padding="5dp">
 
                         <ImageView
@@ -250,6 +257,7 @@
                         android:background="@drawable/rounded15"
                         android:backgroundTint="@color/light_blue"
                         android:orientation="horizontal"
+                        android:onClick="onclickPopularCategory"
                         android:padding="5dp">
 
                         <ImageView
@@ -312,6 +320,7 @@
                         android:layout_marginRight="15dp"
                         android:background="@drawable/border_only_light_blue"
                         android:orientation="vertical"
+                        android:onClick="onclickExploreCities"
                         android:padding="15dp">
 
                         <ImageView
@@ -370,6 +379,7 @@
                         android:layout_marginRight="15dp"
                         android:background="@drawable/border_only_light_blue"
                         android:orientation="vertical"
+                        android:onClick="onclickExploreCities"
                         android:padding="15dp">
 
                         <ImageView
@@ -427,6 +437,7 @@
                         android:layout_marginRight="15dp"
                         android:background="@drawable/border_only_light_blue"
                         android:orientation="vertical"
+                        android:onClick="onclickExploreCities"
                         android:padding="15dp">
 
                         <ImageView
@@ -481,8 +492,10 @@
                         android:id="@+id/mount_merbabu"
                         android:layout_width="250dp"
                         android:layout_height="150dp"
+                        android:layout_marginRight="30dp"
                         android:background="@drawable/border_only_light_blue"
                         android:orientation="vertical"
+                        android:onClick="onclickExploreCities"
                         android:padding="15dp">
 
                         <ImageView
@@ -575,6 +588,7 @@
                         android:layout_marginRight="15dp"
                         android:background="@drawable/border_only_light_blue"
                         android:orientation="vertical"
+                        android:onClick="onclickPopularDestination"
                         android:padding="15dp">
 
                         <ImageView
@@ -632,6 +646,7 @@
                         android:layout_marginRight="15dp"
                         android:background="@drawable/border_only_light_blue"
                         android:orientation="vertical"
+                        android:onClick="onclickPopularDestination"
                         android:padding="15dp">
 
                         <ImageView
@@ -686,8 +701,10 @@
                         android:id="@+id/rajaampat"
                         android:layout_width="250dp"
                         android:layout_height="150dp"
+                        android:layout_marginRight="15dp"
                         android:background="@drawable/border_only_light_blue"
                         android:orientation="vertical"
+                        android:onClick="onclickPopularDestination"
                         android:padding="15dp">
 
                         <ImageView
@@ -742,8 +759,10 @@
                         android:id="@+id/mount_lawu"
                         android:layout_width="250dp"
                         android:layout_height="150dp"
+                        android:layout_marginRight="30dp"
                         android:background="@drawable/border_only_light_blue"
                         android:orientation="vertical"
+                        android:onClick="onclickPopularDestination"
                         android:padding="15dp">
 
                         <ImageView
