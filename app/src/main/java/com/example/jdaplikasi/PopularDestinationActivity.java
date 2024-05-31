@@ -61,4 +61,9 @@ public class PopularDestinationActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
+    public void onclickDetailDestination(View view) {
+        Intent intent = new Intent(this, DetailDestination.class);
+        startActivity(intent);
+    }
 }

@@ -62,6 +62,7 @@
 
                 <!-- Konten 1 -->
                 <LinearLayout
+                    android:onClick="onclickDetailDestination"
                     android:id="@+id/nusapenida"
                     android:layout_width="match_parent"
                     android:layout_height="112dp"
@@ -124,6 +125,7 @@
 
                 <!-- Konten 2 -->
                 <LinearLayout
+                    android:onClick="onclickDetailDestination"
                     android:id="@+id/mountsemeru"
                     android:layout_width="match_parent"
                     android:layout_height="112dp"
@@ -186,6 +188,7 @@
 
                 <!-- Konten 3 -->
                 <LinearLayout
+                    android:onClick="onclickDetailDestination"
                     android:id="@+id/pinkbeach"
                     android:layout_width="match_parent"
                     android:layout_height="112dp"
@@ -248,6 +251,7 @@
 
                 <!-- Konten 4 -->
                 <LinearLayout
+                    android:onClick="onclickDetailDestination"
                     android:id="@+id/mountprau"
                     android:layout_width="match_parent"
                     android:layout_height="112dp"
@@ -310,6 +314,7 @@
 
                 <!-- Konten 5 -->
                 <LinearLayout
+                    android:onClick="onclickDetailDestination"
                     android:id="@+id/baronbeach"
                     android:layout_width="match_parent"
                     android:layout_height="112dp"
@@ -372,6 +377,7 @@
 
                 <!-- Konten 6 -->
                 <LinearLayout
+                    android:onClick="onclickDetailDestination"
                     android:id="@+id/mount_lawu"
                     android:layout_width="match_parent"
                     android:layout_height="112dp"

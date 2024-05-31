@@ -119,7 +119,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginHorizontal="61.5dp"
+            android:layout_marginHorizontal="40dp"
             android:orientation="vertical"
             tools:ignore="ExtraText">
 
@@ -153,7 +153,7 @@
                     android:layout_width="50dp"
                     android:layout_height="70dp"
                     android:gravity="center"
-                    android:layout_marginHorizontal="70dp"
+                    android:layout_marginHorizontal="90dp"
                     android:orientation="vertical">
 
                     <ImageView
