@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#31363F"
-    tools:context=".BeachActivity">
+    tools:context=".ExploreCitiesActivity">
 
     <!-- Top Layout -->
     <LinearLayout
@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Beach"
+        android:text="Mountain"
         android:textSize="20dp"
         android:gravity="center"
         android:textStyle="bold"/>
@@ -58,6 +58,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <!-- Item 1 -->
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="148dp">
@@ -65,8 +66,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/rounded_15_transparent"
-                        android:src="@drawable/painemobeach"
+                        android:src="@drawable/mountain_rinjani"
                         android:scaleType="centerCrop"
                         android:clipToOutline="true"/>
 
@@ -74,32 +74,28 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
                         android:layout_marginLeft="15dp"
-                        android:layout_marginTop="85dp"
-                        android:layout_marginEnd="214dp"
-                        android:text="Pianemo Beach"
+                        android:layout_marginBottom="30dp"
+                        android:text="Mount Rinjani"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="21dp"
+                        android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
                         android:layout_marginLeft="15dp"
-                        android:layout_marginTop="111dp"
-                        android:layout_marginEnd="314dp"
-                        android:text="Papua"
+                        android:layout_marginBottom="10dp"
+                        android:text="Nusa Tenggara Barat"
                         android:textColor="#FFFFFF"
                         android:textSize="15sp"
-                        android:textStyle="normal" />
-
+                        android:textStyle="normal"/>
                 </RelativeLayout>
 
+                <!-- Item 2 -->
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="148dp"
@@ -108,8 +104,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/rounded_15_transparent"
-                        android:src="@drawable/explore_pinkbeach"
+                        android:src="@drawable/mountain_bromo"
                         android:scaleType="centerCrop"
                         android:clipToOutline="true"/>
 
@@ -117,32 +112,28 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
                         android:layout_marginLeft="15dp"
-                        android:layout_marginTop="85dp"
-                        android:layout_marginEnd="253dp"
-                        android:text="Pink Beach"
+                        android:layout_marginBottom="30dp"
+                        android:text="Mount Bromo"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="21dp"
+                        android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
                         android:layout_marginLeft="15dp"
-                        android:layout_marginTop="111dp"
-                        android:layout_marginEnd="275dp"
-                        android:text="Florest, NTT"
+                        android:layout_marginBottom="10dp"
+                        android:text="Jawa Timur"
                         android:textColor="#FFFFFF"
                         android:textSize="15sp"
-                        android:textStyle="normal" />
-
+                        android:textStyle="normal"/>
                 </RelativeLayout>
 
+                <!-- Item 3 -->
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="148dp"
@@ -151,8 +142,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/rounded_15_transparent"
-                        android:src="@drawable/rajaampat"
+                        android:src="@drawable/gunungmerbabu"
                         android:scaleType="centerCrop"
                         android:clipToOutline="true"/>
 
@@ -160,120 +150,104 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
                         android:layout_marginLeft="15dp"
-                        android:layout_marginTop="85dp"
-                        android:layout_marginEnd="188dp"
-                        android:text="Raja Ampat Beach"
+                        android:layout_marginBottom="30dp"
+                        android:text="Mount Merbabu"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="111dp"
-                        android:layout_marginEnd="272dp"
-                        android:text="Papua Barat"
-                        android:textColor="#FFFFFF"
-                        android:textSize="15sp"
-                        android:textStyle="normal" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="148dp"
-                    android:layout_marginTop="20dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/rounded_15_transparent"
-                        android:src="@drawable/beach_kuta"
-                        android:scaleType="centerCrop"
-                        android:clipToOutline="true"/>
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
                         android:layout_marginLeft="15dp"
-                        android:layout_marginTop="85dp"
-                        android:layout_marginEnd="250dp"
-                        android:text="Kuta Beach"
-                        android:textColor="#FFFFFF"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="111dp"
-                        android:layout_marginEnd="330dp"
-                        android:text="Bali"
-                        android:textColor="#FFFFFF"
-                        android:textSize="15sp"
-                        android:textStyle="normal" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="148dp"
-                    android:layout_marginTop="20dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/rounded_15_transparent"
-                        android:src="@drawable/beach_pengadaran"
-                        android:scaleType="centerCrop"
-                        android:clipToOutline="true"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="85dp"
-                        android:layout_marginEnd="174dp"
-                        android:text="Pangandaran Beach"
-                        android:textColor="#FFFFFF"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="111dp"
-                        android:layout_marginEnd="280dp"
+                        android:layout_marginBottom="10dp"
                         android:text="Jawa Barat"
                         android:textColor="#FFFFFF"
                         android:textSize="15sp"
-                        android:textStyle="normal" />
-
+                        android:textStyle="normal"/>
                 </RelativeLayout>
 
+                <!-- Item 4 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="148dp"
+                    android:layout_marginTop="20dp">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/mount_merapi"
+                        android:scaleType="centerCrop"
+                        android:clipToOutline="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginBottom="30dp"
+                        android:text="Mount Merapi"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Jawa Tengah"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="normal"/>
+                </RelativeLayout>
+
+                <!-- Item 5 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="148dp"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/mount_lawu"
+                        android:scaleType="centerCrop"
+                        android:clipToOutline="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginBottom="30dp"
+                        android:text="Mount Lawu"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Jawa Tengah"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="normal"/>
+                </RelativeLayout>
             </LinearLayout>
+
         </ScrollView>
     </LinearLayout>
 

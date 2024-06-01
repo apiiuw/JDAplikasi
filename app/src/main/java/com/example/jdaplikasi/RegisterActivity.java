@@ -26,7 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Membuat intent untuk memulai MainActivity
-                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
                 // Memulai MainActivity
                 startActivity(intent);
             }

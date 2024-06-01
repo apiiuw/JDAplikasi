@@ -21,16 +21,16 @@
             android:name=".DetailDestination"
             android:exported="false" />
         <activity
-            android:name=".MountainActivity"
+            android:name=".ExploreCitiesActivity"
             android:exported="false" />
         <activity
-            android:name=".BeachActivity"
+            android:name=".PopularCategoryActivity"
             android:exported="false" />
         <activity
             android:name=".ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".HomeActivity"
             android:exported="true" />
         <activity
             android:name=".NotificationActivity"

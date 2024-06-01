@@ -45,75 +45,80 @@
             android:layout_marginHorizontal="30dp"
             android:background="@drawable/pink_beach_tengah">
 
-            <LinearLayout
-                android:layout_width="79dp"
-                android:layout_height="243dp"
-                android:layout_marginVertical="28dp"
-                android:layout_marginLeft="253dp"
-                android:paddingTop="16dp"
-                android:paddingBottom="15dp"
-                android:background="@drawable/rounded15"
-                android:backgroundTint="#50000000"
-                android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-                <ScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    tools:ignore="SpeakableTextPresentCheck">
+                <LinearLayout
+                    android:layout_width="79dp"
+                    android:layout_height="243dp"
+                    android:layout_marginVertical="28dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="15dp"
+                    android:background="@drawable/rounded15"
+                    android:backgroundTint="#50000000"
+                    android:orientation="vertical"
+                    android:layout_gravity="end|top">
 
-                    <LinearLayout
+                    <ScrollView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_height="match_parent"
+                        tools:ignore="SpeakableTextPresentCheck">
 
-                        <ImageView
-                            android:layout_width="63dp"
-                            android:layout_height="63dp"
-                            android:layout_gravity="center"
-                            android:layout_marginBottom="7.5dp"
-                            android:src="@drawable/pink_beach_scroll_1" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                        <ImageView
-                            android:layout_width="63dp"
-                            android:layout_height="63dp"
-                            android:layout_gravity="center"
-                            android:layout_marginBottom="7.5dp"
-                            android:src="@drawable/pink_beach_scroll_2" />
+                            <ImageView
+                                android:layout_width="63dp"
+                                android:layout_height="63dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="7.5dp"
+                                android:src="@drawable/pink_beach_scroll_1" />
 
-                        <ImageView
-                            android:layout_width="63dp"
-                            android:layout_height="63dp"
-                            android:layout_gravity="center"
-                            android:layout_marginBottom="7.5dp"
-                            android:src="@drawable/pink_beach_scroll_3" />
+                            <ImageView
+                                android:layout_width="63dp"
+                                android:layout_height="63dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="7.5dp"
+                                android:src="@drawable/pink_beach_scroll_2" />
 
-                        <ImageView
-                            android:layout_width="63dp"
-                            android:layout_height="63dp"
-                            android:layout_gravity="center"
-                            android:layout_marginBottom="7.5dp"
-                            android:src="@drawable/pink_beach_scroll_4" />
+                            <ImageView
+                                android:layout_width="63dp"
+                                android:layout_height="63dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="7.5dp"
+                                android:src="@drawable/pink_beach_scroll_3" />
 
-                        <ImageView
-                            android:layout_width="63dp"
-                            android:layout_height="63dp"
-                            android:layout_gravity="center"
-                            android:layout_marginBottom="7.5dp"
-                            android:src="@drawable/pink_beach_scroll_5" />
+                            <ImageView
+                                android:layout_width="63dp"
+                                android:layout_height="63dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="7.5dp"
+                                android:src="@drawable/pink_beach_scroll_4" />
 
-                        <ImageView
-                            android:layout_width="63dp"
-                            android:layout_height="63dp"
-                            android:layout_gravity="center"
-                            android:layout_marginBottom="7.5dp"
-                            android:src="@drawable/pink_beach_scroll_6" />
+                            <ImageView
+                                android:layout_width="63dp"
+                                android:layout_height="63dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="7.5dp"
+                                android:src="@drawable/pink_beach_scroll_5" />
 
-                    </LinearLayout>
+                            <ImageView
+                                android:layout_width="63dp"
+                                android:layout_height="63dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="7.5dp"
+                                android:src="@drawable/pink_beach_scroll_6" />
 
-                </ScrollView>
+                        </LinearLayout>
 
-            </LinearLayout>
-            
+                    </ScrollView>
+
+                </LinearLayout>
+
+            </FrameLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -121,19 +126,23 @@
             android:layout_height="match_parent"
             android:layout_marginHorizontal="40dp"
             android:orientation="vertical"
+            android:layout_marginBottom="58dp"
             tools:ignore="ExtraText">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="71dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="13dp"
                 android:orientation="horizontal">
 
+                <!-- Item Maps Kiri -->
                 <LinearLayout
-                    android:layout_width="50dp"
+                    android:layout_width="0dp"
                     android:layout_height="70dp"
-                    android:orientation="vertical">
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
 
                     <ImageView
                         android:layout_width="50dp"
@@ -149,12 +158,13 @@
 
                 </LinearLayout>
 
+                <!-- Item Guide Tengah -->
                 <LinearLayout
-                    android:layout_width="50dp"
+                    android:layout_width="0dp"
                     android:layout_height="70dp"
-                    android:gravity="center"
-                    android:layout_marginHorizontal="90dp"
-                    android:orientation="vertical">
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
 
                     <ImageView
                         android:layout_width="50dp"
@@ -170,10 +180,13 @@
 
                 </LinearLayout>
 
+                <!-- Item Dinner Kanan -->
                 <LinearLayout
-                    android:layout_width="50dp"
+                    android:layout_width="0dp"
                     android:layout_height="70dp"
-                    android:orientation="vertical">
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
 
                     <ImageView
                         android:layout_width="50dp"
@@ -189,8 +202,8 @@
 
                 </LinearLayout>
 
-
             </LinearLayout>
+
 
             <View
                 android:layout_width="match_parent"
@@ -266,14 +279,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="18dp"
-                        android:text="Description"
+                        android:text="Trivia Facts"
                         android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Welcome to Pink Beach\n Its name comes from its pink coloration given by the small broken pink parts of the coral reef next to the beach. Those little pink fragments give to this beach an amazing pale pink color with crystal blue water. The true definition of paradise beach." />
+                        android:text="Welcome to Pink Beach Its name comes from its pink coloration given by the  small broken pink parts of the coral reef next to the beach. Those little pink fragments give to this beach an amazing pale pink color with crystal blue water. The true definition  of paradise beach." />
 
                 </LinearLayout>
             </ScrollView>

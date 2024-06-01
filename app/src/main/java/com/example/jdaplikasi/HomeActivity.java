@@ -9,12 +9,12 @@ import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_view);
 
@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-        bottomNavigationView.setSelectedItemId(R.id.home);
     }
 
     // Method untuk membuka WishlistActivity (Sudah Fix)
@@ -56,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onclickPopularCategory(View view) {
-        Intent intent = new Intent(this, BeachActivity.class);
+        Intent intent = new Intent(this, PopularCategoryActivity.class);
         startActivity(intent);
     }
 
@@ -66,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onclickExploreCities(View view) {
-        Intent intent = new Intent(this, MountainActivity.class);
+        Intent intent = new Intent(this, ExploreCitiesActivity.class);
         startActivity(intent);
     }
 

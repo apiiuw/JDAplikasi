@@ -46,7 +46,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     // Method untuk membuka WishlistActivity (Sudah Fix)
     private void openHomeActivity() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
     }
 
@@ -57,7 +57,7 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void onclickBack(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
     }
 }
