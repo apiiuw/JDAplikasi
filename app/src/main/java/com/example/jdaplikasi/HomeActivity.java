@@ -53,9 +53,28 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onclickPopularMountainCategory(View view) {
+        Intent intent = new Intent(this, PopularCategoryMountainActivity.class);
+        startActivity(intent);
+    }
 
-    public void onclickPopularCategory(View view) {
-        Intent intent = new Intent(this, PopularCategoryActivity.class);
+    public void onclickPopularBeachCategory(View view) {
+        Intent intent = new Intent(this, PopularCategoryBeachActivity.class);
+        startActivity(intent);
+    }
+
+    public void onclickPopularLakeCategory(View view) {
+        Intent intent = new Intent(this, PopularCategoryLakeActivity.class);
+        startActivity(intent);
+    }
+
+    public void onclickPopularCraterCategory(View view) {
+        Intent intent = new Intent(this, PopularCategoryCraterActivity.class);
+        startActivity(intent);
+    }
+
+    public void onclickPopularParkCategory(View view) {
+        Intent intent = new Intent(this, PopularCategoryParkActivity.class);
         startActivity(intent);
     }
 
@@ -65,7 +84,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void onclickExploreCities(View view) {
-        Intent intent = new Intent(this, ExploreCitiesActivity.class);
+        Intent intent = new Intent(this, DetailPinkBeachActivity.class);
         startActivity(intent);
     }
 

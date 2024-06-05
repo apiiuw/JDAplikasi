@@ -149,7 +149,7 @@
                         android:background="@drawable/rounded15"
                         android:backgroundTint="@color/light_blue"
                         android:orientation="horizontal"
-                        android:onClick="onclickPopularCategory"
+                        android:onClick="onclickPopularMountainCategory"
                         android:padding="5dp">
 
                         <ImageView
@@ -177,7 +177,7 @@
                         android:background="@drawable/rounded15"
                         android:backgroundTint="@color/light_blue"
                         android:orientation="horizontal"
-                        android:onClick="onclickPopularCategory"
+                        android:onClick="onclickPopularBeachCategory"
                         android:padding="5dp">
 
                         <ImageView
@@ -204,7 +204,7 @@
                         android:background="@drawable/rounded15"
                         android:backgroundTint="@color/light_blue"
                         android:orientation="horizontal"
-                        android:onClick="onclickPopularCategory"
+                        android:onClick="onclickPopularLakeCategory"
                         android:padding="5dp">
 
                         <ImageView
@@ -231,7 +231,7 @@
                         android:background="@drawable/rounded15"
                         android:backgroundTint="@color/light_blue"
                         android:orientation="horizontal"
-                        android:onClick="onclickPopularCategory"
+                        android:onClick="onclickPopularCraterCategory"
                         android:padding="5dp">
 
                         <ImageView
@@ -258,7 +258,7 @@
                         android:background="@drawable/rounded15"
                         android:backgroundTint="@color/light_blue"
                         android:orientation="horizontal"
-                        android:onClick="onclickPopularCategory"
+                        android:onClick="onclickPopularParkCategory"
                         android:padding="5dp">
 
                         <ImageView

@@ -63,7 +63,7 @@ public class PopularDestinationActivity extends AppCompatActivity {
     }
 
     public void onclickDetailDestination(View view) {
-        Intent intent = new Intent(this, DetailDestination.class);
+        Intent intent = new Intent(this, DetailPinkBeachActivity.class);
         startActivity(intent);
     }
 }

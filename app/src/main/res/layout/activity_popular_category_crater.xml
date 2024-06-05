@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#31363F"
-    tools:context=".PopularCategoryActivity">
+    tools:context=".PopularCategoryCraterActivity">
 
     <!-- Top Layout -->
     <LinearLayout
@@ -31,10 +31,10 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/text_popular_category"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Beach"
         android:textSize="20dp"
         android:gravity="center"
         android:textStyle="bold"/>
@@ -59,189 +59,155 @@
                 android:orientation="vertical">
 
                 <RelativeLayout
+                    android:id="@+id/popular_category_1"
                     android:layout_width="match_parent"
                     android:layout_height="148dp">
 
                     <ImageView
+                        android:id="@+id/popular_category_image_1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/rounded_15_transparent"
-                        android:src="@drawable/painemobeach"
                         android:scaleType="centerCrop"
                         android:clipToOutline="true"/>
 
                     <TextView
+                        android:id="@+id/popular_category_nama_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginLeft="15dp"
                         android:layout_marginBottom="30dp"
-                        android:text="Pianemo Beach"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/popular_category_lokasi_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginLeft="15dp"
                         android:layout_marginBottom="10dp"
-                        android:text="Papua"
                         android:textColor="#FFFFFF"
                         android:textSize="15sp"
                         android:textStyle="normal" />
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/popular_category_2"
                     android:layout_width="match_parent"
                     android:layout_height="148dp"
                     android:layout_marginTop="20dp">
 
                     <ImageView
+                        android:id="@+id/popular_category_image_2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/rounded_15_transparent"
-                        android:src="@drawable/explore_pinkbeach"
                         android:scaleType="centerCrop"
                         android:clipToOutline="true"/>
 
                     <TextView
+                        android:id="@+id/popular_category_nama_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginLeft="15dp"
                         android:layout_marginBottom="30dp"
-                        android:text="Pink Beach"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/popular_category_lokasi_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginLeft="15dp"
                         android:layout_marginBottom="10dp"
-                        android:text="Florest, NTT"
                         android:textColor="#FFFFFF"
                         android:textSize="15sp"
                         android:textStyle="normal" />
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/popular_category_3"
                     android:layout_width="match_parent"
                     android:layout_height="148dp"
                     android:layout_marginTop="20dp">
 
                     <ImageView
+                        android:id="@+id/popular_category_image_3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/rounded_15_transparent"
-                        android:src="@drawable/rajaampat"
                         android:scaleType="centerCrop"
                         android:clipToOutline="true"/>
 
                     <TextView
+                        android:id="@+id/popular_category_nama_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginLeft="15dp"
                         android:layout_marginBottom="30dp"
-                        android:text="Raja Ampat Beach"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/popular_category_lokasi_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginLeft="15dp"
                         android:layout_marginBottom="10dp"
-                        android:text="Papua Barat"
                         android:textColor="#FFFFFF"
                         android:textSize="15sp"
                         android:textStyle="normal" />
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/popular_category_4"
                     android:layout_width="match_parent"
                     android:layout_height="148dp"
                     android:layout_marginTop="20dp">
 
                     <ImageView
+                        android:id="@+id/popular_category_image_4"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/rounded_15_transparent"
-                        android:src="@drawable/beach_kuta"
                         android:scaleType="centerCrop"
                         android:clipToOutline="true"/>
 
                     <TextView
+                        android:id="@+id/popular_category_nama_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginLeft="15dp"
                         android:layout_marginBottom="30dp"
-                        android:text="Kuta Beach"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/popular_category_lokasi_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginLeft="15dp"
                         android:layout_marginBottom="10dp"
-                        android:text="Bali"
-                        android:textColor="#FFFFFF"
-                        android:textSize="15sp"
-                        android:textStyle="normal" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="148dp"
-                    android:layout_marginTop="20dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/rounded_15_transparent"
-                        android:src="@drawable/beach_pengadaran"
-                        android:scaleType="centerCrop"
-                        android:clipToOutline="true"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginBottom="30dp"
-                        android:text="Pangandaran Beach"
-                        android:textColor="#FFFFFF"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="Jawa Barat"
                         android:textColor="#FFFFFF"
                         android:textSize="15sp"
                         android:textStyle="normal" />

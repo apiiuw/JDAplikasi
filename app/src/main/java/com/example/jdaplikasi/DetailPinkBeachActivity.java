@@ -6,12 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class DetailDestination extends AppCompatActivity {
+public class DetailPinkBeachActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_destination);
+        setContentView(R.layout.activity_detail_pink_beach);
     }
 
     public void onclickBack(View view) {
