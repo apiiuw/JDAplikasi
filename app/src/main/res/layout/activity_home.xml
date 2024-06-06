@@ -317,7 +317,7 @@
                     <LinearLayout
                         android:id="@+id/mountbromo"
                         android:layout_width="250dp"
-                        android:layout_height="150dp"
+                        android:layout_height="160dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/border_only_light_blue"
                         android:orientation="vertical"
@@ -344,12 +344,12 @@
 
                             <ImageView
                                 android:layout_width="15dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:src="@drawable/lokasi_icon" />
 
                             <TextView
                                 android:layout_width="120dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:text="Jawa Timur"
                                 android:textSize="10dp"
                                 android:textColor="@color/white"
@@ -357,12 +357,12 @@
 
                             <ImageView
                                 android:layout_width="15dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:src="@drawable/map_icon" />
 
                             <TextView
                                 android:layout_width="80dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:text="Map Direction"
                                 android:textColor="@color/light_blue"
                                 android:textSize="10dp"
@@ -376,7 +376,7 @@
                     <LinearLayout
                         android:id="@+id/pinkbeach"
                         android:layout_width="250dp"
-                        android:layout_height="150dp"
+                        android:layout_height="160dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/border_only_light_blue"
                         android:orientation="vertical"
@@ -403,12 +403,12 @@
 
                             <ImageView
                                 android:layout_width="15dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:src="@drawable/lokasi_icon" />
 
                             <TextView
                                 android:layout_width="120dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:text="Flores, NTT"
                                 android:textSize="10dp"
                                 android:textColor="@color/white"
@@ -416,12 +416,12 @@
 
                             <ImageView
                                 android:layout_width="15dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:src="@drawable/map_icon" />
 
                             <TextView
                                 android:layout_width="80dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:text="Map Direction"
                                 android:textColor="@color/light_blue"
                                 android:textSize="10dp"
@@ -434,7 +434,7 @@
                     <LinearLayout
                         android:id="@+id/painemobeach"
                         android:layout_width="250dp"
-                        android:layout_height="150dp"
+                        android:layout_height="160dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/border_only_light_blue"
                         android:orientation="vertical"
@@ -461,12 +461,12 @@
 
                             <ImageView
                                 android:layout_width="15dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:src="@drawable/lokasi_icon" />
 
                             <TextView
                                 android:layout_width="120dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:text="Papua"
                                 android:textColor="@color/white"
                                 android:textSize="10dp"
@@ -474,12 +474,12 @@
 
                             <ImageView
                                 android:layout_width="15dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:src="@drawable/map_icon" />
 
                             <TextView
                                 android:layout_width="120dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:text="Map Direction"
                                 android:textColor="@color/light_blue"
                                 android:textSize="10dp"
@@ -492,7 +492,7 @@
                     <LinearLayout
                         android:id="@+id/mount_merbabu"
                         android:layout_width="250dp"
-                        android:layout_height="150dp"
+                        android:layout_height="160dp"
                         android:layout_marginRight="30dp"
                         android:background="@drawable/border_only_light_blue"
                         android:orientation="vertical"
@@ -519,12 +519,12 @@
 
                             <ImageView
                                 android:layout_width="15dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:src="@drawable/lokasi_icon" />
 
                             <TextView
                                 android:layout_width="120dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:text="Jawa Tengah"
                                 android:textColor="@color/white"
                                 android:textSize="10dp"
@@ -532,12 +532,12 @@
 
                             <ImageView
                                 android:layout_width="15dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:src="@drawable/map_icon" />
 
                             <TextView
                                 android:layout_width="120dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:text="Map Direction"
                                 android:textColor="@color/light_blue"
                                 android:textSize="10dp"
@@ -580,12 +580,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="15dp"
                     android:orientation="horizontal">
 
                     <LinearLayout
                         android:id="@+id/mountrinjani"
                         android:layout_width="250dp"
-                        android:layout_height="150dp"
+                        android:layout_height="160dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/border_only_light_blue"
                         android:orientation="vertical"
@@ -612,12 +613,12 @@
 
                             <ImageView
                                 android:layout_width="15dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:src="@drawable/lokasi_icon" />
 
                             <TextView
                                 android:layout_width="120dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:text="Nusa Tenggara Barat"
                                 android:textColor="@color/white"
                                 android:textSize="10dp"
@@ -625,12 +626,12 @@
 
                             <ImageView
                                 android:layout_width="15dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:src="@drawable/map_icon" />
 
                             <TextView
                                 android:layout_width="120dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:text="Map Direction"
                                 android:textColor="@color/light_blue"
                                 android:textSize="10dp"
@@ -643,7 +644,7 @@
                     <LinearLayout
                         android:id="@+id/nusapenida"
                         android:layout_width="250dp"
-                        android:layout_height="150dp"
+                        android:layout_height="160dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/border_only_light_blue"
                         android:orientation="vertical"
@@ -670,12 +671,12 @@
 
                             <ImageView
                                 android:layout_width="15dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:src="@drawable/lokasi_icon" />
 
                             <TextView
                                 android:layout_width="120dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:text="Bali"
                                 android:textColor="@color/white"
                                 android:textSize="10dp"
@@ -683,12 +684,12 @@
 
                             <ImageView
                                 android:layout_width="15dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:src="@drawable/map_icon" />
 
                             <TextView
                                 android:layout_width="120dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:text="Map Direction"
                                 android:textColor="@color/light_blue"
                                 android:textSize="10dp"
@@ -701,7 +702,7 @@
                     <LinearLayout
                         android:id="@+id/rajaampat"
                         android:layout_width="250dp"
-                        android:layout_height="150dp"
+                        android:layout_height="160dp"
                         android:layout_marginRight="15dp"
                         android:background="@drawable/border_only_light_blue"
                         android:orientation="vertical"
@@ -728,12 +729,12 @@
 
                             <ImageView
                                 android:layout_width="15dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:src="@drawable/lokasi_icon" />
 
                             <TextView
                                 android:layout_width="120dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:text="Papua Barat"
                                 android:textColor="@color/white"
                                 android:textSize="10dp"
@@ -741,12 +742,12 @@
 
                             <ImageView
                                 android:layout_width="15dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:src="@drawable/map_icon" />
 
                             <TextView
                                 android:layout_width="120dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:text="Map Direction"
                                 android:textColor="@color/light_blue"
                                 android:textSize="10dp"
@@ -759,7 +760,7 @@
                     <LinearLayout
                         android:id="@+id/mount_lawu"
                         android:layout_width="250dp"
-                        android:layout_height="150dp"
+                        android:layout_height="160dp"
                         android:layout_marginRight="30dp"
                         android:background="@drawable/border_only_light_blue"
                         android:orientation="vertical"
@@ -786,12 +787,12 @@
 
                             <ImageView
                                 android:layout_width="15dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:src="@drawable/lokasi_icon" />
 
                             <TextView
                                 android:layout_width="120dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:text="Jawa Tengah"
                                 android:textColor="@color/white"
                                 android:textSize="10dp"
@@ -799,12 +800,12 @@
 
                             <ImageView
                                 android:layout_width="15dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:src="@drawable/map_icon" />
 
                             <TextView
                                 android:layout_width="120dp"
-                                android:layout_height="12dp"
+                                android:layout_height="14dp"
                                 android:text="Map Direction"
                                 android:textColor="@color/light_blue"
                                 android:textSize="10dp" />

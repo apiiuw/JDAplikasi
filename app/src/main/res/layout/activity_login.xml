@@ -78,6 +78,7 @@
                 android:textColor="@color/white"/>
 
             <EditText
+                android:id="@+id/user_email"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/edit_text_signin"
@@ -96,6 +97,7 @@
                 android:textColor="@color/white"/>
 
             <EditText
+                android:id="@+id/user_password"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/edit_text_signin"
@@ -145,6 +147,7 @@
                 tools:ignore="TextContrastCheck" />
 
             <Button
+                android:id="@+id/btn_signin_google"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="15dp"
@@ -154,6 +157,7 @@
                 android:textAllCaps="false"/>
 
             <Button
+                android:id="@+id/btn_signin_twitter"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="15dp"
@@ -185,7 +189,6 @@
                     android:textColor="@color/white"
                     tools:ignore="TouchTargetSizeCheck" />
             </LinearLayout>
-
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

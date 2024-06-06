@@ -44,7 +44,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign In"
+            android:text="Register"
             android:textColor="@color/white"
             android:textSize="20dp"
             android:layout_gravity="center"
@@ -65,12 +65,32 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Name"
+            android:textColor="@color/white"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"/>
+
+        <EditText
+            android:id="@+id/create_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded15"
+            android:hint="Enter your name"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Email"
             android:textColor="@color/white"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="5dp"/>
 
         <EditText
+            android:id="@+id/create_user_email"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/rounded15"
@@ -89,6 +109,7 @@
             android:layout_marginBottom="5dp"/>
 
         <EditText
+            android:id="@+id/create_user_password"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/rounded15"
@@ -107,6 +128,7 @@
             android:layout_marginBottom="5dp"/>
 
         <EditText
+            android:id="@+id/create_user_password_check"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/rounded15"
@@ -151,7 +173,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="10dp"
             android:gravity="center">
 
             <TextView
