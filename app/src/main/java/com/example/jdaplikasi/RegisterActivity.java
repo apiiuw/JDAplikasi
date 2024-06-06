@@ -12,13 +12,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private EditText userName, userEmail, userPassword;
+    private EditText userName, userEmail, userPassword, userConfirmPassword;
     private Button btnSignUp;
     private TextView btnBack, btnSignIn;
     private ImageView btnBackButton;
@@ -38,6 +39,7 @@ public class RegisterActivity extends AppCompatActivity {
         userName = findViewById(R.id.create_user_name);
         userEmail = findViewById(R.id.create_user_email);
         userPassword = findViewById(R.id.create_user_password);
+        userConfirmPassword = findViewById(R.id.create_user_password_check);
         btnSignUp = findViewById(R.id.btn_signup);
         btnBack = findViewById(R.id.text_back);
         btnSignIn = findViewById(R.id.signin);
@@ -91,6 +93,7 @@ public class RegisterActivity extends AppCompatActivity {
         String name = userName.getText().toString().trim();
         String email = userEmail.getText().toString().trim();
         String password = userPassword.getText().toString().trim();
+        String confirmPassword = userConfirmPassword.getText().toString().trim();
 
         if (TextUtils.isEmpty(name)) {
             Toast.makeText(this, "Enter your name", Toast.LENGTH_SHORT).show();
@@ -107,27 +110,62 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         }
 
-        // Creating user in Firebase Authentication
+        if (!password.equals(confirmPassword)) {
+            Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
-                        // User created successfully
                         FirebaseUser currentUser = mAuth.getCurrentUser();
                         if (currentUser != null) {
-                            // Saving additional user information to Firebase Realtime Database
                             String userId = currentUser.getUid();
                             DatabaseReference currentUserDb = mDatabase.child(userId);
-                            currentUserDb.child("name").setValue(name);
-
-                            // Redirecting user to HomeActivity or any desired activity
-                            Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
-                            startActivity(intent);
-                            finish();
+                            currentUserDb.child("name").setValue(name).addOnCompleteListener(task1 -> {
+                                if (task1.isSuccessful()) {
+                                    // Data saved successfully
+                                    Toast.makeText(RegisterActivity.this, "Welcome, " + name, Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                } else {
+                                    // Failed to save data
+                                    Toast.makeText(RegisterActivity.this, "Failed to save user data. Please try again.", Toast.LENGTH_SHORT).show();
+                                }
+                            });
                         }
                     } else {
-                        // If user creation fails
-                        Toast.makeText(RegisterActivity.this, "Failed to create account. Please try again.", Toast.LENGTH_SHORT).show();
+                        if (task.getException() instanceof FirebaseAuthUserCollisionException) {
+                            // User with email already exists
+                            Toast.makeText(RegisterActivity.this, "Email already registered. Please use a different email.", Toast.LENGTH_SHORT).show();
+                        } else {
+                            // Other errors
+                            String errorMessage = task.getException() != null ? task.getException().getMessage() : "Unknown error";
+                            Toast.makeText(RegisterActivity.this, "Failed to create account: " + errorMessage, Toast.LENGTH_LONG).show();
+                        }
                     }
                 });
+
+    }
+
+    // Metode untuk memvalidasi kompleksitas password
+    private boolean isPasswordValid(String password) {
+        // Password harus mengandung setidaknya satu huruf besar dan satu digit
+        return password.matches(".*[A-Z].*") && password.matches(".*\\d.*");
+    }
+
+    // Metode untuk menangani email atau password yang sudah digunakan
+    private void handleUserCollision(String errorCode) {
+        if (errorCode.equals("ERROR_EMAIL_ALREADY_IN_USE")) {
+            // Jika email sudah digunakan
+            Toast.makeText(RegisterActivity.this, "Email is already registered. Please use a different email.", Toast.LENGTH_SHORT).show();
+        } else if (errorCode.equals("ERROR_CREDENTIAL_ALREADY_IN_USE")) {
+            // Jika password sudah digunakan
+            Toast.makeText(RegisterActivity.this, "Password is already used. Please choose a different password.", Toast.LENGTH_SHORT).show();
+        } else {
+            // Kesalahan lainnya
+            Toast.makeText(RegisterActivity.this, "Failed to create account: Unknown error", Toast.LENGTH_LONG).show();
+        }
     }
 }

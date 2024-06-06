@@ -74,10 +74,13 @@
             android:id="@+id/create_user_name"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/rounded15"
+            android:background="@drawable/edit_text_signin"
             android:hint="Enter your name"
+            android:backgroundTint="@color/white"
             android:padding="10dp"
             android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:singleLine="true"
             android:textSize="12dp"
             tools:ignore="TextSizeCheck" />
 
@@ -93,10 +96,13 @@
             android:id="@+id/create_user_email"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/rounded15"
+            android:background="@drawable/edit_text_signin"
             android:hint="Enter your email"
+            android:backgroundTint="@color/white"
             android:padding="10dp"
             android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:singleLine="true"
             android:textSize="12dp"
             tools:ignore="TextSizeCheck" />
 
@@ -112,10 +118,14 @@
             android:id="@+id/create_user_password"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/rounded15"
+            android:background="@drawable/edit_text_signin"
             android:hint="Enter your password"
+            android:backgroundTint="@color/white"
             android:padding="10dp"
             android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:singleLine="true"
+            android:inputType="textPassword"
             android:textSize="12dp"
             tools:ignore="TextSizeCheck" />
 
@@ -131,10 +141,14 @@
             android:id="@+id/create_user_password_check"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/rounded15"
+            android:background="@drawable/edit_text_signin"
             android:hint="Re - enter your password"
+            android:backgroundTint="@color/white"
             android:padding="10dp"
             android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:singleLine="true"
+            android:inputType="textPassword"
             android:textSize="12dp"
             tools:ignore="TextSizeCheck" />
 
@@ -144,7 +158,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/rounded30"
-            android:text="Sign Up"
+            android:text="Register"
             android:textSize="17dp"
             android:textColor="#264D3F"
             android:textAllCaps="false" />

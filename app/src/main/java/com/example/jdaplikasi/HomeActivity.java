@@ -6,15 +6,51 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-
+import android.widget.TextView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class HomeActivity extends AppCompatActivity {
+
+    private TextView textNamaUser;
+    private DatabaseReference userRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        textNamaUser = findViewById(R.id.textNamaUser);
+
+        // Mendapatkan referensi ke user saat ini di Realtime Database
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (currentUser != null) {
+            userRef = FirebaseDatabase.getInstance().getReference().child("users").child(currentUser.getUid());
+            // Mendengarkan perubahan pada data pengguna
+            userRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if (snapshot.exists()) {
+                        String nama = snapshot.child("name").getValue(String.class);
+                        // Mengatur teks pada TextView sesuai dengan nama pengguna dari Realtime Database
+                        textNamaUser.setText("Hi! " + nama);
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                    // Penanganan kesalahan
+                }
+            });
+        } else {
+            textNamaUser.setText("Hi! Guest");
+        }
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_view);
 
@@ -92,6 +128,7 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PopularDestinationActivity.class);
         startActivity(intent);
     }
+
     public void onclickProfile(View view) {
         Intent intent = new Intent(this, ProfileActivity.class);
         startActivity(intent);
