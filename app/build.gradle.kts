@@ -38,9 +38,19 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.android.car.ui:car-ui-lib:2.6.0")
+    //Bom
+    implementation("com.google.firebase:firebase-bom:33.1.0")
+    //Google Signin
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
+    //Twitter Signin
+    implementation ("com.twitter.sdk.android:twitter-core:3.3.0")
+    implementation ("com.twitter.sdk.android:twitter:3.3.0")
+    //Database Firebase
     implementation("com.google.firebase:firebase-database:21.0.0")
     implementation ("com.github.bumptech.glide:glide:4.12.0")
+    //Storage Firebase
     implementation("com.google.firebase:firebase-storage:21.0.0")
+    //Auth Firebase
     implementation("com.google.firebase:firebase-auth:23.0.0")
     annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
     testImplementation("junit:junit:4.13.2")

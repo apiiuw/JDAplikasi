@@ -73,6 +73,9 @@ public class ProfileActivity extends AppCompatActivity {
                     // Ketika item "Wishlist" diklik, buka WishlistDestinationActivity
                     openWishlistActivity();
                     return true;
+                } else if (id == R.id.profile) {
+
+                    return true;
                 }
                 return false;
             }
