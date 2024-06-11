@@ -59,7 +59,7 @@ public class HomeActivity extends AppCompatActivity {
                                     .into(imageViewUser);
                         } else {
                             // Jika URL foto pengguna tidak tersedia, gunakan foto default dari layout XML
-                            imageViewUser.setImageResource(R.drawable.user_1); // Ganti dengan ID foto default di layout XML
+                            imageViewUser.setImageResource(R.drawable.user_profile); // Ganti dengan ID foto default di layout XML
                         }
                     }
                 }
@@ -146,7 +146,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void onclickPopularDestination(View view) {
-        Intent intent = new Intent(this, WishlistActivity.class);
+        Intent intent = new Intent(this, DetailPinkBeachActivity.class);
         startActivity(intent);
     }
 

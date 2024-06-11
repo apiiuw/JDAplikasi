@@ -150,7 +150,7 @@
                 android:textColor="#958F8F"
                 tools:ignore="TextContrastCheck" />
 
-            <Button
+            v<Button
                 android:id="@+id/btn_signin_google"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"

@@ -138,6 +138,8 @@
 
                 <!-- Item Maps Kiri -->
                 <LinearLayout
+                    android:id="@+id/href_maps"
+                    android:onClick="openMapsLink"
                     android:layout_width="0dp"
                     android:layout_height="70dp"
                     android:layout_weight="1"
@@ -160,6 +162,8 @@
 
                 <!-- Item Guide Tengah -->
                 <LinearLayout
+                    android:id="@+id/href_hotel"
+                    android:onClick="openHotelLink"
                     android:layout_width="0dp"
                     android:layout_height="70dp"
                     android:layout_weight="1"
@@ -169,19 +173,21 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/guide_detail_destination"/>
+                        android:src="@drawable/hotel_detail_destination"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="3dp"
                         android:gravity="center"
-                        android:text="Guide"/>
+                        android:text="Hotel"/>
 
                 </LinearLayout>
 
                 <!-- Item Dinner Kanan -->
                 <LinearLayout
+                    android:id="@+id/href_restaurant"
+                    android:onClick="openRestaurantLink"
                     android:layout_width="0dp"
                     android:layout_height="70dp"
                     android:layout_weight="1"
@@ -191,14 +197,14 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/dinner_detail_destination"/>
+                        android:src="@drawable/restaurant_detail_destination"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="3dp"
                         android:gravity="center"
-                        android:text="Dinner"/>
+                        android:text="Restaurant"/>
 
                 </LinearLayout>
 
@@ -256,7 +262,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="100.000 IDR - 300.00 IDR"
+                        android:text="100.000 IDR - 300.000 IDR"
                         android:layout_marginLeft="2dp"
                         android:textColor="#76ABAE" />
 

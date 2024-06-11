@@ -53,14 +53,14 @@
             android:layout_height="130dp"
             android:layout_marginTop="20dp"
             android:layout_gravity="center"
-            android:src="@drawable/user_1" />
+            android:src="@drawable/user_profile" />
 
         <TextView
             android:id="@+id/textNamaUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:text="Rafi Rizqallah Andila"
+            android:text="Guest"
             android:textColor="@color/white"
             android:textSize="20dp"
             android:textStyle="bold"
@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:gravity="center"
-            android:text="rafirizqallah.a@gmail.com"
+            android:text="guest@gmail.com"
             android:textColor="@color/white"
             android:textSize="15dp"
             android:textStyle="normal"
@@ -109,10 +109,14 @@
                     android:layout_gravity="center"
                     android:textColor="@color/white"/>
 
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:layout_marginLeft="205dp"
                     android:layout_gravity="center"
                     android:src="@drawable/panahkanan"/>
             </LinearLayout>
@@ -143,10 +147,14 @@
                     android:layout_gravity="center"
                     android:textColor="@color/white"/>
 
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:layout_marginLeft="202dp"
                     android:layout_gravity="center"
                     android:src="@drawable/panahkanan"/>
             </LinearLayout>

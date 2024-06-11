@@ -121,7 +121,7 @@ public class EditAccountActivity extends AppCompatActivity {
                                 .into(imageViewUser);
                     } else {
                         // Jika URL foto pengguna tidak tersedia, gunakan foto default dari layout XML
-                        imageViewUser.setImageResource(R.drawable.user_1); // Ganti dengan ID foto default di layout XML
+                        imageViewUser.setImageResource(R.drawable.user_profile); // Ganti dengan ID foto default di layout XML
                     }
                 }
 
