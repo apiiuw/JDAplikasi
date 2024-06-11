@@ -1,5 +1,4 @@
 package com.example.jdaplikasi;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +9,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
@@ -95,21 +96,41 @@ public class RegisterActivity extends AppCompatActivity {
         String password = userPassword.getText().toString().trim();
         String confirmPassword = userConfirmPassword.getText().toString().trim();
 
+        //Name
         if (TextUtils.isEmpty(name)) {
-            Toast.makeText(this, "Enter your name", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter a name", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (!isNameValid(name)) {
+            Toast.makeText(this, "Name should contain only letters and be up to 16 characters long", Toast.LENGTH_SHORT).show();
             return;
         }
 
+        //Email
         if (TextUtils.isEmpty(email)) {
-            Toast.makeText(this, "Enter your email", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter a email", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (!isEmailValid(email)) {
+            Toast.makeText(this, "Please enter a valid email address", Toast.LENGTH_SHORT).show();
             return;
         }
 
+        //Password
         if (TextUtils.isEmpty(password)) {
-            Toast.makeText(this, "Enter your password", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter a password", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (!isPasswordValid(password)) {
+            Toast.makeText(this, "Password must have 1 uppercase letter, 1 digit, and be at least 8 characters long", Toast.LENGTH_SHORT).show();
             return;
         }
 
+        //Confirm Password
+        if (TextUtils.isEmpty(confirmPassword)) {
+            Toast.makeText(this, "Please confirm a password", Toast.LENGTH_SHORT).show();
+            return;
+        }
         if (!password.equals(confirmPassword)) {
             Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show();
             return;
@@ -149,10 +170,23 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
+    private boolean isNameValid(String name) {
+        // Deklarasi regex untuk memvalidasi input nama
+        String nameRegex = "^[a-zA-Z\\s]{1,16}$";
+        // Memeriksa apakah nama cocok dengan pola regex
+        return name.matches(nameRegex);
+    }
+
+    // Method untuk memeriksa apakah email valid
+    private boolean isEmailValid(String email) {
+        return email.contains("@") && email.contains(".com")&& !email.matches(".*[A-Z].*");
+    }
+
+
     // Metode untuk memvalidasi kompleksitas password
     private boolean isPasswordValid(String password) {
         // Password harus mengandung setidaknya satu huruf besar dan satu digit
-        return password.matches(".*[A-Z].*") && password.matches(".*\\d.*");
+        return password.length() >= 8 && password.matches(".*[A-Z].*") && password.matches(".*\\d.*") && !password.contains(" ");
     }
 
     // Metode untuk menangani email atau password yang sudah digunakan

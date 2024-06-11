@@ -1,13 +1,10 @@
 package com.example.jdaplikasi;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class NotificationActivity extends AppCompatActivity {
 
@@ -28,7 +25,7 @@ public class NotificationActivity extends AppCompatActivity {
 
     // Method untuk membuka WishlistActivity (Sudah Fix)
     private void openWishlistActivity() {
-        Intent intent = new Intent(this, PopularDestinationActivity.class);
+        Intent intent = new Intent(this, WishlistActivity.class);
         startActivity(intent);
     }
 

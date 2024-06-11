@@ -204,18 +204,31 @@ public class LoginActivity extends AppCompatActivity {
                                     DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("users");
                                     String userId = user.getUid();
 
-                                    // Membuat objek pengguna dengan informasi yang diperoleh
-                                    Map<String, Object> userMap = new HashMap<>();
-                                    userMap.put("name", name);
-                                    userMap.put("email", email);
-                                    userMap.put("photoUrl", photoUrl);
+                                    // Periksa apakah pengguna sudah ada di database sebelumnya
+                                    userRef.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                            if (!dataSnapshot.exists()) {
+                                                // Pengguna belum ada di database, simpan informasinya
+                                                Map<String, Object> userMap = new HashMap<>();
+                                                userMap.put("name", name);
+                                                userMap.put("email", email);
+                                                userMap.put("photoUrl", photoUrl);
 
-                                    // Menyimpan informasi pengguna ke database Firebase
-                                    userRef.child(userId).setValue(userMap);
+                                                // Menyimpan informasi pengguna ke database Firebase
+                                                userRef.child(userId).setValue(userMap);
+                                            }
+                                            // Lanjutkan ke halaman beranda setelah pengguna berhasil masuk
+                                            fetchUserName(user.getUid());
+                                        }
+
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                                            // Penanganan kesalahan
+                                            Toast.makeText(LoginActivity.this, "Database error.", Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
                                 }
-
-                                // Lanjutkan ke halaman beranda setelah pengguna berhasil masuk
-                                fetchUserName(user.getUid());
                             }
                         } else {
                             // If sign in fails, display a message to the user.
@@ -224,6 +237,7 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
     }
+
 
     private void signInUser(String email, String password) {
         mAuth.signInWithEmailAndPassword(email, password)

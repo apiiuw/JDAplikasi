@@ -116,7 +116,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:clickable="true"
-                android:text="Forget your password?"
+                android:text="Forgot your password?"
                 android:textColor="@color/white"
                 tools:ignore="TouchTargetSizeCheck" />
 
@@ -156,17 +156,9 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/edit_text_signin"
+                android:drawableStart="@drawable/google"
+                android:paddingLeft="13dp"
                 android:text="Sign In with Google"
-                android:textColor="@color/white"
-                android:textAllCaps="false"/>
-
-            <Button
-                android:id="@+id/btn_signin_twitter"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/edit_text_signin"
-                android:text="Sign In with Twitter"
                 android:textColor="@color/white"
                 android:textAllCaps="false"/>
 

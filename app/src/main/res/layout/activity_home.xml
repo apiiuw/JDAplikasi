@@ -57,7 +57,7 @@
                     android:id="@+id/textNamaUser"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Rafi Rizqallah Andila"
+                    android:text="Hi! Guest"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp"
                     android:textStyle="bold" />

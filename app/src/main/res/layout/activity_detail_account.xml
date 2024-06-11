@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#31363F"
-    tools:context=".ProfileActivity">
+    tools:context=".DetailAccountActivity">
 
     <!-- Top Layout -->
     <LinearLayout
@@ -40,7 +40,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Profile"
+            android:text="Account"
             android:textColor="@color/white"
             android:textSize="20dp"
             android:layout_gravity="center"
@@ -60,7 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:text="Rafi Rizqallah Andila"
+            android:text=""
             android:textColor="@color/white"
             android:textSize="20dp"
             android:textStyle="bold"
@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:gravity="center"
-            android:text="rafirizqallah.a@gmail.com"
+            android:text=""
             android:textColor="@color/white"
             android:textSize="15dp"
             android:textStyle="normal"
@@ -81,75 +81,65 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/btn_account"
-                android:clickable="true"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/user_nama"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@drawable/rounded30"
+                android:background="@drawable/edit_text_signin"
                 android:backgroundTint="#222831"
-                android:orientation="horizontal"
-                android:padding="5dp">
+                android:text=""
+                android:padding="10dp"
+                android:textSize="17dp"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                tools:ignore="TextSizeCheck" />
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/icon_btn_profile"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="Account"
-                    android:layout_gravity="center"
-                    android:textColor="@color/white"/>
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="205dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/panahkanan"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/btn_logout"
-                android:clickable="true"
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
+                android:text="Email"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/rounded30"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/user_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_text_signin"
                 android:backgroundTint="#222831"
-                android:orientation="horizontal"
-                android:padding="5dp">
+                android:text=""
+                android:padding="10dp"
+                android:textSize="17dp"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                tools:ignore="TextSizeCheck" />
 
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/logout_icon"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="Logout"
-                    android:layout_gravity="center"
-                    android:textColor="@color/white"/>
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="202dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/panahkanan"/>
-            </LinearLayout>
+            <Button
+                android:id="@+id/user_edit_account"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginHorizontal="50dp"
+                android:background="@drawable/rounded15"
+                android:backgroundTint="@color/light_blue"
+                android:textStyle="bold"
+                android:text="Edit Account"
+                android:padding="10dp"
+                android:textSize="17dp"
+                android:singleLine="true"
+                android:gravity="center"
+                tools:ignore="TextSizeCheck" />
 
 
         </LinearLayout>
