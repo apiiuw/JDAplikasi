@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +26,17 @@ public class PopularCategoryBeachActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_popular_category_beach);
+
+        RelativeLayout beachPiaynemo = findViewById(R.id.popular_category_1);
+        RelativeLayout beachPink = findViewById(R.id.popular_category_2);
+        RelativeLayout beachKuta = findViewById(R.id.popular_category_3);
+        RelativeLayout beachPangandaran = findViewById(R.id.popular_category_4);
+
+
+        beachPiaynemo.setOnClickListener(v -> openDetailPage("detail_pianemobeach"));
+        beachPink.setOnClickListener(v -> openDetailPage("detail_pinkbeach"));
+        beachKuta.setOnClickListener(v -> openDetailPage("detail_kutabeach"));
+        beachPangandaran.setOnClickListener(v -> openDetailPage("detail_pangandaranbeach"));
 
         // Initialize image views
         tvDataImages[0] = findViewById(R.id.popular_category_image_1);
@@ -128,6 +140,12 @@ public class PopularCategoryBeachActivity extends AppCompatActivity {
 
     public void onclickBack(View view) {
         Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+    }
+
+    private void openDetailPage(String detailId) {
+        Intent intent = new Intent(this, DetailDestinationActivity.class);
+        intent.putExtra("detailId", detailId);
         startActivity(intent);
     }
 }

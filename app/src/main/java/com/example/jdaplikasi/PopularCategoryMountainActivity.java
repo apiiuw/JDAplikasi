@@ -1,11 +1,14 @@
 package com.example.jdaplikasi;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.bumptech.glide.Glide;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -23,6 +26,20 @@ public class PopularCategoryMountainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_popular_category_mountain);
+
+        RelativeLayout mountRinjani = findViewById(R.id.popular_category_1);
+        RelativeLayout mountBromo = findViewById(R.id.popular_category_2);
+        RelativeLayout mountMerbabu = findViewById(R.id.popular_category_3);
+        RelativeLayout mountPapandayan = findViewById(R.id.popular_category_4);
+        RelativeLayout mountPrau = findViewById(R.id.popular_category_5);
+
+
+        mountRinjani.setOnClickListener(v -> openDetailPage("detail_mountrinjani"));
+        mountBromo.setOnClickListener(v -> openDetailPage("detail_mountbromo"));
+        mountMerbabu.setOnClickListener(v -> openDetailPage("detail_mountmerbabu"));
+        mountPapandayan.setOnClickListener(v -> openDetailPage("detail_mountpapandayan"));
+        mountPrau.setOnClickListener(v -> openDetailPage("detail_mountprau"));
+
 
         // Initialize image views
         tvDataImages[0] = findViewById(R.id.popular_category_image_1);
@@ -129,6 +146,12 @@ public class PopularCategoryMountainActivity extends AppCompatActivity {
 
     public void onclickBack(View view) {
         Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+    }
+
+    private void openDetailPage(String detailId) {
+        Intent intent = new Intent(this, DetailDestinationActivity.class);
+        intent.putExtra("detailId", detailId);
         startActivity(intent);
     }
 }
