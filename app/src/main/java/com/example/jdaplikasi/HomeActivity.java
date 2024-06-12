@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -31,6 +32,24 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        LinearLayout mountBromo = findViewById(R.id.detail_mountbromo);
+        LinearLayout pinkBeach = findViewById(R.id.detail_pinkbeach);
+        LinearLayout painemoBeach = findViewById(R.id.detail_painemobeach);
+        LinearLayout mountMerbabu = findViewById(R.id.detail_mountmerbabu);
+        LinearLayout mountRinjani = findViewById(R.id.detail_mountrinjani);
+        LinearLayout nusapenidaBeach = findViewById(R.id.detail_nusapenidabeach);
+        LinearLayout baronBeach = findViewById(R.id.detail_baronbeach);
+        LinearLayout mountLawu = findViewById(R.id.detail_mountlawu);
+
+        mountBromo.setOnClickListener(v -> openDetailPage("detail_mountbromo"));
+        pinkBeach.setOnClickListener(v -> openDetailPage("detail_pinkbeach"));
+        painemoBeach.setOnClickListener(v -> openDetailPage("detail_pianemobeach"));
+        mountMerbabu.setOnClickListener(v -> openDetailPage("detail_mountmerbabu"));
+        mountRinjani.setOnClickListener(v -> openDetailPage("detail_mountrinjani"));
+        nusapenidaBeach.setOnClickListener(v -> openDetailPage("detail_nusapenidabeach"));
+        baronBeach.setOnClickListener(v -> openDetailPage("detail_baronbeach"));
+        mountLawu.setOnClickListener(v -> openDetailPage("detail_mountlawu"));
 
         // Inisialisasi TextView
         textNamaUser = findViewById(R.id.textNamaUser);
@@ -141,17 +160,23 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void onclickExploreCities(View view) {
-        Intent intent = new Intent(this, DetailPinkBeachActivity.class);
+        Intent intent = new Intent(this, DetailDestinationActivity.class);
         startActivity(intent);
     }
 
     public void onclickPopularDestination(View view) {
-        Intent intent = new Intent(this, DetailPinkBeachActivity.class);
+        Intent intent = new Intent(this, DetailDestinationActivity.class);
         startActivity(intent);
     }
 
     public void onclickProfile(View view) {
         Intent intent = new Intent(this, ProfileActivity.class);
+        startActivity(intent);
+    }
+
+    private void openDetailPage(String detailId) {
+        Intent intent = new Intent(this, DetailDestinationActivity.class);
+        intent.putExtra("detailId", detailId);
         startActivity(intent);
     }
 }

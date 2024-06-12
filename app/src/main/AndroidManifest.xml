@@ -44,7 +44,7 @@
             android:name=".SearchActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailPinkBeachActivity"
+            android:name=".DetailDestinationActivity"
             android:exported="false" />
         <activity
             android:name=".ExploreCitiesActivity"

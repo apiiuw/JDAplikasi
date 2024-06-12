@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#31363F"
-    tools:context=".DetailPinkBeachActivity">
+    tools:context=".DetailDestinationActivity">
 
     <!-- Top Layout -->
     <LinearLayout
@@ -28,7 +28,19 @@
             android:layout_marginLeft="5dp"
             android:gravity="center"
             android:textColor="@color/white"/>
+
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Category"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textStyle="bold"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,11 +51,13 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/image1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="23dp"
             android:layout_marginHorizontal="30dp"
-            android:background="@drawable/pink_beach_tengah">
+            android:orientation="vertical"
+            android:background="@drawable/loading_detail_destination">
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -71,46 +85,52 @@
                             android:orientation="vertical">
 
                             <ImageView
+                                android:id="@+id/image2"
                                 android:layout_width="63dp"
                                 android:layout_height="63dp"
                                 android:layout_gravity="center"
                                 android:layout_marginBottom="7.5dp"
-                                android:src="@drawable/pink_beach_scroll_1" />
+                                android:src="@drawable/loading_detail_destination" />
 
                             <ImageView
+                                android:id="@+id/image3"
                                 android:layout_width="63dp"
                                 android:layout_height="63dp"
                                 android:layout_gravity="center"
                                 android:layout_marginBottom="7.5dp"
-                                android:src="@drawable/pink_beach_scroll_2" />
+                                android:src="@drawable/loading_detail_destination" />
 
                             <ImageView
+                                android:id="@+id/image4"
                                 android:layout_width="63dp"
                                 android:layout_height="63dp"
                                 android:layout_gravity="center"
                                 android:layout_marginBottom="7.5dp"
-                                android:src="@drawable/pink_beach_scroll_3" />
+                                android:src="@drawable/loading_detail_destination" />
 
                             <ImageView
+                                android:id="@+id/image5"
                                 android:layout_width="63dp"
                                 android:layout_height="63dp"
                                 android:layout_gravity="center"
                                 android:layout_marginBottom="7.5dp"
-                                android:src="@drawable/pink_beach_scroll_4" />
+                                android:src="@drawable/loading_detail_destination" />
 
                             <ImageView
+                                android:id="@+id/image6"
                                 android:layout_width="63dp"
                                 android:layout_height="63dp"
                                 android:layout_gravity="center"
                                 android:layout_marginBottom="7.5dp"
-                                android:src="@drawable/pink_beach_scroll_5" />
+                                android:src="@drawable/loading_detail_destination" />
 
                             <ImageView
+                                android:id="@+id/image7"
                                 android:layout_width="63dp"
                                 android:layout_height="63dp"
                                 android:layout_gravity="center"
                                 android:layout_marginBottom="7.5dp"
-                                android:src="@drawable/pink_beach_scroll_6" />
+                                android:src="@drawable/loading_detail_destination" />
 
                         </LinearLayout>
 
@@ -141,7 +161,7 @@
                     android:id="@+id/href_maps"
                     android:onClick="openMapsLink"
                     android:layout_width="0dp"
-                    android:layout_height="70dp"
+                    android:layout_height="72dp"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:gravity="center">
@@ -149,23 +169,23 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
                         android:src="@drawable/map_detail_destination"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
                         android:gravity="center"
                         android:text="Maps"/>
 
                 </LinearLayout>
 
-                <!-- Item Guide Tengah -->
+                <!-- Item Hotel Tengah -->
                 <LinearLayout
                     android:id="@+id/href_hotel"
                     android:onClick="openHotelLink"
                     android:layout_width="0dp"
-                    android:layout_height="70dp"
+                    android:layout_height="72dp"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:gravity="center">
@@ -173,23 +193,23 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
                         android:src="@drawable/hotel_detail_destination"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
                         android:gravity="center"
                         android:text="Hotel"/>
 
                 </LinearLayout>
 
-                <!-- Item Dinner Kanan -->
+                <!-- Item Restaurant Kanan -->
                 <LinearLayout
                     android:id="@+id/href_restaurant"
                     android:onClick="openRestaurantLink"
                     android:layout_width="0dp"
-                    android:layout_height="70dp"
+                    android:layout_height="72dp"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:gravity="center">
@@ -197,12 +217,12 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
                         android:src="@drawable/restaurant_detail_destination"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
                         android:gravity="center"
                         android:text="Restaurant"/>
 
@@ -226,45 +246,70 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    android:text="Pink Beach"
-                    android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/detail_nama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Destination Loading..."
+                        android:textStyle="bold" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="6dp">
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="18dp">
 
-                    <ImageView
-                        android:layout_width="15dp"
-                        android:layout_height="12dp"
-                        android:src="@drawable/lokasi_icon"
-                        android:layout_gravity="center" />
-
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="20dp"
-                        android:text="Flores, NTT"
-                        android:layout_marginLeft="2dp" />
+                        android:layout_gravity="center">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="15dp"
-                        android:src="@drawable/idr_detail_destination"
-                        android:layout_gravity="center"
-                        android:scaleType="center" />
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="12dp"
+                            android:src="@drawable/lokasi_icon"
+                            android:layout_gravity="center" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                        <TextView
+                            android:id="@+id/detail_lokasi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:text="Location Loading..."
+                            android:layout_marginLeft="2dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="100.000 IDR - 300.000 IDR"
-                        android:layout_marginLeft="2dp"
-                        android:textColor="#76ABAE" />
+                        android:layout_gravity="end|center">
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="15dp"
+                            android:src="@drawable/idr_detail_destination"
+                            android:scaleType="center"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/detail_range_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Range Price Loading..."
+                            android:textSize="10dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="2dp"
+                            android:textColor="#76ABAE" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -276,23 +321,11 @@
                         android:textStyle="bold"/>
 
                     <TextView
+                        android:id="@+id/detail_description"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Welcome to Pink Beach\n Its name comes from its pink coloration given by the small broken pink parts of the coral reef next to the beach. Those little pink fragments give to this beach an amazing pale pink color with crystal blue water. The true definition of paradise beach." />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="18dp"
-                        android:text="Trivia Facts"
-                        android:textStyle="bold"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Welcome to Pink Beach Its name comes from its pink coloration given by the  small broken pink parts of the coral reef next to the beach. Those little pink fragments give to this beach an amazing pale pink color with crystal blue water. The true definition  of paradise beach." />
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas pharetra convallis posuere morbi leo urna molestie at elementum. Lectus arcu bibendum at varius vel pharetra. Eleifend mi in nulla posuere sollicitudin aliquam ultrices. Faucibus ornare suspendisse sed nisi lacus. Sagittis purus sit amet volutpat consequat. Netus et malesuada fames ac turpis egestas maecenas pharetra convallis. Purus non enim praesent elementum facilisis leo vel fringilla. Lectus quam id leo in vitae turpis massa sed elementum. Volutpat ac tincidunt vitae semper quis lectus nulla at." />
 
                 </LinearLayout>
             </ScrollView>

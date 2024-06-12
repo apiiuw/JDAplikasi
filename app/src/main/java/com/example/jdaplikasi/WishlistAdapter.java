@@ -43,11 +43,15 @@ public class WishlistAdapter extends RecyclerView.Adapter<WishlistAdapter.Wishli
         return wishlistItems.size();
     }
 
+    public void setDatabaseRef(DatabaseReference wishlistRef) {
+        this.wishlistRef = wishlistRef;
+    }
+
     class WishlistViewHolder extends RecyclerView.ViewHolder {
         private TextView itemNameTextView;
         private TextView itemLocationTextView;
         private ImageView itemImageView;
-        private ImageButton deleteButton;
+        private ImageView deleteButton;
 
         public WishlistViewHolder(@NonNull View itemView) {
             super(itemView);

@@ -2,6 +2,7 @@
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:onClick="onclickDetailDestination"
     android:id="@+id/item_list"
     android:layout_width="match_parent"
@@ -14,54 +15,73 @@
 
     <ImageView
         android:id="@+id/item_image"
-        android:layout_width="139dp"
-        android:layout_height="83dp"
+        android:layout_width="110dp"
+        android:layout_height="82dp"
         android:scaleType="centerCrop"
         android:src="@drawable/nusapenida" />
 
     <LinearLayout
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:id="@+id/item_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Nusa Penida Beach"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="115dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp">
 
-            <ImageView
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:src="@drawable/lokasi_icon_fill" />
-
-            <TextView
-                android:id="@+id/item_location"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="2dp"
-                android:text="Bali"
-                android:textSize="10dp" />
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
+                <TextView
+                    android:id="@+id/item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nusa Penida Beach"
+                    android:textSize="12dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/lokasi_icon_fill" />
+
+                <TextView
+                    android:id="@+id/item_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="2dp"
+                    android:text="Bali"
+                    android:textSize="10dp" />
+
+            </LinearLayout>
         </LinearLayout>
+
+
     </LinearLayout>
 
     <ImageView
         android:id="@+id/item_button"
         android:layout_width="20dp"
         android:layout_height="20dp"
+        android:layout_marginLeft="13dp"
         android:src="@drawable/lovefillicon"
+        app:tint="#C20000"
         android:layout_marginTop="10dp"/>
 
 </LinearLayout>

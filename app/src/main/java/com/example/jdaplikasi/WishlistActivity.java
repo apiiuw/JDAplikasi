@@ -7,9 +7,12 @@ import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -21,74 +24,90 @@ import java.util.List;
 
 public class WishlistActivity extends AppCompatActivity {
 
+    private RecyclerView recyclerView;
+    private WishlistAdapter adapter;
+    private List<ItemList> wishlistItems;
+    private DatabaseReference databaseRef;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wishlist);
 
-        // Di dalam onCreate() method di WishlistActivity.java
+        recyclerView = findViewById(R.id.recycler_view);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        wishlistItems = new ArrayList<>();
+        adapter = new WishlistAdapter(wishlistItems, null); // We'll set the databaseRef later
+        recyclerView.setAdapter(adapter);
 
-        // Mendapatkan referensi ke database Firebase
-        DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference("wishlist");
+        // Mendapatkan user ID dari pengguna yang sedang login
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            String userId = user.getUid();
 
-        // Mendapatkan data dari database Firebase
-        databaseRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                // Membuat list untuk menyimpan item-item wishlist
-                List<ItemList> wishlistItems = new ArrayList<>();
+            // Mendapatkan referensi ke database Firebase berdasarkan user ID
+            databaseRef = FirebaseDatabase.getInstance().getReference("users").child(userId).child("wishlist");
 
-                // Melakukan iterasi pada setiap item di database
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    // Mengambil data item dari database
-                    String itemName = snapshot.child("item_nama").getValue(String.class);
-                    String itemLocation = snapshot.child("item_lokasi").getValue(String.class);
-                    String itemImage = snapshot.child("item_image").getValue(String.class);
+            // Mendapatkan data dari database Firebase
+            databaseRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    // Clear the list to avoid duplicate entries
+                    wishlistItems.clear();
 
-                    // Membuat objek ItemList dan menambahkannya ke dalam list
-                    ItemList item = new ItemList(itemName, itemLocation, itemImage);
-                    wishlistItems.add(item);
+                    // Melakukan iterasi pada setiap item di database
+                    for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                        // Mengambil data item dari database
+                        String itemName = snapshot.child("item_nama").getValue(String.class);
+                        String itemLocation = snapshot.child("item_lokasi").getValue(String.class);
+                        String itemImage = snapshot.child("item_image").getValue(String.class);
+                        String itemId = snapshot.getKey();
+
+                        // Membuat objek ItemList dan menambahkannya ke dalam list
+                        ItemList item = new ItemList(itemName, itemLocation, itemImage);
+                        item.setItemId(itemId);
+                        wishlistItems.add(item);
+                    }
+
+                    // Notify the adapter that data has changed
+                    adapter.notifyDataSetChanged();
+                    // Set the database reference in the adapter after data is fetched
+                    adapter.setDatabaseRef(databaseRef);
                 }
 
-                // Mengatur RecyclerView dengan adapter
-                RecyclerView recyclerView = findViewById(R.id.recycler_view);
-                WishlistAdapter adapter = new WishlistAdapter(wishlistItems, databaseRef);
-                recyclerView.setAdapter(adapter);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                // Handle jika terjadi error saat mengambil data dari database
-            }
-        });
-
-
-        // Inisialisasi BottomNavigationView
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_view);
-
-        // Atur listener untuk menangani klik pada item navigasi
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                // Periksa id dari item yang diklik
-                int id = item.getItemId();
-                if (id == R.id.home) {
-                    // Ketika item "Home" diklik, buka MainActivity
-                    openHomeActivity();
-                    return true;
-                } else if (id == R.id.wishlist) {
-                    // Ketika item "Wishlist" diklik, tidak perlu melakukan apa-apa karena kita sudah berada di WishlistActivity
-                    return true;
-                } else if (id == R.id.profile) {
-                    // Ketika item "Profile" diklik, buka ProfileActivity
-                    openProfileActivity();
-                    return true;
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+                    // Handle jika terjadi error saat mengambil data dari database
                 }
-                return false;
-            }
-        });
+            });
 
-        bottomNavigationView.setSelectedItemId(R.id.wishlist);
+            // Inisialisasi BottomNavigationView
+            BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_view);
+
+            // Atur listener untuk menangani klik pada item navigasi
+            bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    // Periksa id dari item yang diklik
+                    int id = item.getItemId();
+                    if (id == R.id.home) {
+                        // Ketika item "Home" diklik, buka MainActivity
+                        openHomeActivity();
+                        return true;
+                    } else if (id == R.id.wishlist) {
+                        // Ketika item "Wishlist" diklik, tidak perlu melakukan apa-apa karena kita sudah berada di WishlistActivity
+                        return true;
+                    } else if (id == R.id.profile) {
+                        // Ketika item "Profile" diklik, buka ProfileActivity
+                        openProfileActivity();
+                        return true;
+                    }
+                    return false;
+                }
+            });
+
+            bottomNavigationView.setSelectedItemId(R.id.wishlist);
+        }
     }
 
     // Method untuk membuka MainActivity
@@ -110,7 +129,7 @@ public class WishlistActivity extends AppCompatActivity {
 
     // Method untuk menangani klik pada detail destinasi
     public void onclickDetailDestination(View view) {
-        Intent intent = new Intent(this, DetailPinkBeachActivity.class);
+        Intent intent = new Intent(this, DetailDestinationActivity.class);
         startActivity(intent);
     }
 }

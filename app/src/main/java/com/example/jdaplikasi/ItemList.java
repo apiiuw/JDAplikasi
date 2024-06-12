@@ -4,10 +4,10 @@ public class ItemList {
     private String itemName;
     private String itemLocation;
     private String itemImage;
-    private  String itemId;
+    private String itemId;
 
     public ItemList() {
-        // Default constructor required for calls to DataSnapshot.getValue(WishlistItem.class)
+        // Default constructor required for calls to DataSnapshot.getValue(ItemList.class)
     }
 
     public ItemList(String itemName, String itemLocation, String itemImage) {
@@ -32,10 +32,7 @@ public class ItemList {
         return itemId;
     }
 
-    // Setter method for itemId (optional, if needed)
     public void setItemId(String itemId) {
         this.itemId = itemId;
     }
-
-    // getter dan setter
 }

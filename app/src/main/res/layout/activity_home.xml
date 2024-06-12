@@ -310,7 +310,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:id="@+id/mountbromo"
+                        android:id="@+id/detail_mountbromo"
                         android:layout_width="250dp"
                         android:layout_height="160dp"
                         android:layout_marginRight="15dp"
@@ -369,7 +369,7 @@
 
 
                     <LinearLayout
-                        android:id="@+id/pinkbeach"
+                        android:id="@+id/detail_pinkbeach"
                         android:layout_width="250dp"
                         android:layout_height="160dp"
                         android:layout_marginRight="15dp"
@@ -427,7 +427,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/painemobeach"
+                        android:id="@+id/detail_painemobeach"
                         android:layout_width="250dp"
                         android:layout_height="160dp"
                         android:layout_marginRight="15dp"
@@ -446,7 +446,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Painemo Beach"
+                            android:text="Paiynemo Beach"
                             android:textColor="@color/white" />
 
                         <LinearLayout
@@ -485,7 +485,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/mount_merbabu"
+                        android:id="@+id/detail_mountmerbabu"
                         android:layout_width="250dp"
                         android:layout_height="160dp"
                         android:layout_marginRight="30dp"
@@ -571,7 +571,6 @@
                 android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:id="@+id/PopularDestination"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
@@ -579,7 +578,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:id="@+id/mountrinjani"
+                        android:id="@+id/detail_mountrinjani"
                         android:layout_width="250dp"
                         android:layout_height="160dp"
                         android:layout_marginRight="15dp"
@@ -637,7 +636,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/nusapenida"
+                        android:id="@+id/detail_nusapenidabeach"
                         android:layout_width="250dp"
                         android:layout_height="160dp"
                         android:layout_marginRight="15dp"
@@ -695,7 +694,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/rajaampat"
+                        android:id="@+id/detail_baronbeach"
                         android:layout_width="250dp"
                         android:layout_height="160dp"
                         android:layout_marginRight="15dp"
@@ -709,12 +708,12 @@
                             android:layout_height="90dp"
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/rajaampat" />
+                            android:src="@drawable/baronbeach" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Raja Ampat"
+                            android:text="Baron Beach"
                             android:textColor="@color/white" />
 
                         <LinearLayout
@@ -730,7 +729,7 @@
                             <TextView
                                 android:layout_width="120dp"
                                 android:layout_height="14dp"
-                                android:text="Papua Barat"
+                                android:text="Nusa Tenggara Barat"
                                 android:textColor="@color/white"
                                 android:textSize="10dp"
                                 tools:ignore="TextSizeCheck" />
@@ -753,7 +752,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/mount_lawu"
+                        android:id="@+id/detail_mountlawu"
                         android:layout_width="250dp"
                         android:layout_height="160dp"
                         android:layout_marginRight="30dp"
