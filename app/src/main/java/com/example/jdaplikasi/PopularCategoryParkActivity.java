@@ -33,7 +33,7 @@ public class PopularCategoryParkActivity extends AppCompatActivity {
         RelativeLayout parkTelukCendrawasihNational = findViewById(R.id.popular_category_4);
 
 
-        parkTamanSafariBahari.setOnClickListener(v -> openDetailPage("detail_tamansafaribaharipark"));
+        parkTamanSafariBahari.setOnClickListener(v -> openDetailPage("detail_tamansafaribahari"));
         parkKomodoNational.setOnClickListener(v -> openDetailPage("detail_komodonationalpark"));
         parkBunakenNationalMarine.setOnClickListener(v -> openDetailPage("detail_bunakennationalmarinepark"));
         parkTelukCendrawasihNational.setOnClickListener(v -> openDetailPage("detail_telukcendrawasihnationalpark"));

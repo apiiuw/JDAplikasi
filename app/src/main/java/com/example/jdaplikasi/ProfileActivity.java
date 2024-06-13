@@ -72,7 +72,7 @@ public class ProfileActivity extends AppCompatActivity {
                                 .into((ImageView) findViewById(R.id.image_user));
                     } else {
                         // Jika URL foto pengguna tidak tersedia, gunakan foto default dari layout XML
-                        ((ImageView) findViewById(R.id.image_user)).setImageResource(R.drawable.user_1); // Ganti dengan ID foto default di layout XML
+                        ((ImageView) findViewById(R.id.image_user)).setImageResource(R.drawable.user_profile); // Ganti dengan ID foto default di layout XML
                     }
                 }
 

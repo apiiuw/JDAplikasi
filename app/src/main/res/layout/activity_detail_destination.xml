@@ -63,6 +63,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
+                <ImageView
+                    android:id="@+id/add_wishlist"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/lovefillicon"/>
+
                 <LinearLayout
                     android:layout_width="79dp"
                     android:layout_height="243dp"
