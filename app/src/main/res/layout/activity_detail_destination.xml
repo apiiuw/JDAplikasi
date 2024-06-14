@@ -65,8 +65,8 @@
 
                 <ImageView
                     android:id="@+id/add_wishlist"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="29dp"
+                    android:layout_height="29dp"
                     android:layout_gravity="center|bottom"
                     android:layout_marginBottom="20dp"
                     android:src="@drawable/lovefillicon"/>
