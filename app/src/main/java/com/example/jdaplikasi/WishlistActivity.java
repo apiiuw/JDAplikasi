@@ -37,8 +37,6 @@ public class WishlistActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         wishlistItems = new ArrayList<>();
-        adapter = new WishlistAdapter(wishlistItems, null); // We'll set the databaseRef later
-        recyclerView.setAdapter(adapter);
 
         // Mendapatkan user ID dari pengguna yang sedang login
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -64,15 +62,16 @@ public class WishlistActivity extends AppCompatActivity {
                         String itemId = snapshot.getKey();
 
                         // Membuat objek ItemList dan menambahkannya ke dalam list
-                        ItemList item = new ItemList(itemName, itemLocation, itemImage);
-                        item.setItemId(itemId);
+                        ItemList item = new ItemList(itemId, itemName, itemLocation, itemImage);
                         wishlistItems.add(item);
                     }
 
+                    // Initialize the adapter with context and data
+                    adapter = new WishlistAdapter(WishlistActivity.this, wishlistItems, databaseRef);
+                    recyclerView.setAdapter(adapter);
+
                     // Notify the adapter that data has changed
                     adapter.notifyDataSetChanged();
-                    // Set the database reference in the adapter after data is fetched
-                    adapter.setDatabaseRef(databaseRef);
                 }
 
                 @Override

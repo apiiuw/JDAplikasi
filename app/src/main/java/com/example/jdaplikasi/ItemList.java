@@ -10,7 +10,8 @@ public class ItemList {
         // Default constructor required for calls to DataSnapshot.getValue(ItemList.class)
     }
 
-    public ItemList(String itemName, String itemLocation, String itemImage) {
+    public ItemList(String itemId, String itemName, String itemLocation, String itemImage) {
+        this.itemId = itemId;
         this.itemName = itemName;
         this.itemLocation = itemLocation;
         this.itemImage = itemImage;

@@ -1,9 +1,10 @@
 package com.example.jdaplikasi;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,8 +20,10 @@ public class WishlistAdapter extends RecyclerView.Adapter<WishlistAdapter.Wishli
 
     private List<ItemList> wishlistItems;
     private DatabaseReference wishlistRef;
+    private Context context;
 
-    public WishlistAdapter(List<ItemList> wishlistItems, DatabaseReference wishlistRef) {
+    public WishlistAdapter(Context context, List<ItemList> wishlistItems, DatabaseReference wishlistRef) {
+        this.context = context;
         this.wishlistItems = wishlistItems;
         this.wishlistRef = wishlistRef;
     }
@@ -59,6 +62,19 @@ public class WishlistAdapter extends RecyclerView.Adapter<WishlistAdapter.Wishli
             itemLocationTextView = itemView.findViewById(R.id.item_location);
             itemImageView = itemView.findViewById(R.id.item_image);
             deleteButton = itemView.findViewById(R.id.item_button);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        ItemList item = wishlistItems.get(position);
+                        Intent intent = new Intent(context, DetailDestinationActivity.class);
+                        intent.putExtra("detailId", item.getItemId());
+                        context.startActivity(intent);
+                    }
+                }
+            });
         }
 
         public void bind(ItemList item) {
@@ -71,7 +87,9 @@ public class WishlistAdapter extends RecyclerView.Adapter<WishlistAdapter.Wishli
                 @Override
                 public void onClick(View v) {
                     int position = getAdapterPosition();
-                    wishlistRef.child(wishlistItems.get(position).getItemId()).removeValue();
+                    if (position != RecyclerView.NO_POSITION) {
+                        wishlistRef.child(wishlistItems.get(position).getItemId()).removeValue();
+                    }
                 }
             });
         }
